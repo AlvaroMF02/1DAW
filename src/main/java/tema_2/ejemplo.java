@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tema_2;
 
 /**
@@ -11,5 +7,10 @@ package tema_2;
 public class ejemplo {
     public static void main(String[] args) {
         System.out.println("Alvarito");
+        int a = 10;
+        int b = 20;
+        boolean aMayorB = a>b;
+        
+        System.out.println(aMayorB);
     }
 }
