@@ -27,25 +27,11 @@ public class ejer3 {
         double resul3doub = c*d;
         double resul4doub = c/d;
         
-//        String resultados = """
-//                            a+b=
-//                            a-b=
-//                            a*b=
-//                            a/b=
-//                            """;
-//        System.out.println(resultados);
-        
-         System.out.println("RESULTADOS INT"
-         +"\n a+b="+resul1int
-         +"\n a-b="+resul2int
-         +"\n a*b="+resul3int
-         +"\n a/b="+resul4int);
 
-         System.out.println("RESULTADOS DOUBLE"
-         +"\n c+d="+resul1doub
-         +"\n c-d="+resul2doub
-         +"\n c*d="+resul3doub
-         +"\n c/d="+resul4doub);
+        String resultados = """
+                            a+b= %f
+                            
+                            """;
          
          
 
