@@ -24,7 +24,7 @@ public class expresiones_logicas {
         //HAY QUE LIMPIAR EL BUFFER (teclado.nextLine())
         
         //limpiar el buffer
-        teclado.nextLine();
+        //teclado.nextLine();
         
         System.out.println("Intriduce tu nombre");
         nombre = teclado.nextLine();
@@ -61,5 +61,38 @@ public class expresiones_logicas {
         boolean h = apellido.endsWith("dez");
         //I LA EDAD NO ESTA ETRE 40 Y 50
         boolean i =edad>=40 && edad <=50;
+        
+        String resultados = """
+                            RESULTADOS
+                            
+                            LA EDAD ESTA COMPRENDIDA ENTR 25 Y 35 AÑOS INCLUIDOS
+                            %b
+                            
+                            EL PESO ES MAYOR DE 50KG O MENOR O IGUAL DE 100KG
+                            %b
+                            
+                            NO MIDE 1,75
+                            %b
+                            
+                            LA ESTATURA ESTA ENTRE 100CM Y 180CM, EXCLUIDOS
+                            %b
+                            
+                            LA EDAD MAS 10 AÑOS NO SUPERA LOS 60
+                            %b
+                            
+                            EL NOMBRE ES IGUAL A "PABLO"
+                            %b
+                            
+                            EL APELLIDO CONTIENE LA LETRA J
+                            %b
+                            
+                            EL APPELLIDO TERMINA EN DEZ
+                            %b
+                            
+                            LA EDAD NO ESTA ETRE 40 Y 50
+                            %b
+                            """.formatted(a,b,c,d,e,f,g,h,i);
+        
+        System.out.println(resultados);
     }
 }
