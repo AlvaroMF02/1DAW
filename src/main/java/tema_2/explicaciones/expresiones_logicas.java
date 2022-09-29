@@ -50,7 +50,7 @@ public class expresiones_logicas {
         //C NO MIDE 1,75
         boolean c = peso<1.75;
         //D LA ESTATURA ESTA ENTRE 100CM Y 180CM, EXCLUIDOS
-        boolean d = estatura>100 && estatura>180;
+        boolean d = estatura>100 && estatura<180;
         //E LA EDAD MAS 10 AÑOS NO SUPERA LOS 60
         boolean e =(edad+10)<60;
         //F EL NOMBRE ES IGUAL A "PABLO", IGNORANDO MAYUSCULAS Y MINUSCULAS. EQUALSIGNORECAS
@@ -60,7 +60,7 @@ public class expresiones_logicas {
         //H EL APPELLIDO TERMINA EN DEZ
         boolean h = apellido.endsWith("dez");
         //I LA EDAD NO ESTA ETRE 40 Y 50
-        boolean i =edad>=40 && edad <=50;
+        boolean i =(edad<40 && edad >50);
         
         String resultados = """
                             RESULTADOS
