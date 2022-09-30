@@ -23,8 +23,8 @@ public class ejer8 {
         
         //OPERACIONES
         horas = tiempo / 3600;
-        minutos = tiempo % 60;      //cojo el resto de la division
-        segundos = minutos % 60;
+        minutos = (tiempo- (3600*horas))/60;      //cojo el resto de la division
+        segundos = tiempo - ((horas*3600)+(minutos*60));
         
         
         System.out.println("El tiempo es de " + horas +" horas "+ minutos +" min "+ segundos +" seg");
