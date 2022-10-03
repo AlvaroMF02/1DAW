@@ -16,6 +16,8 @@ public class ejer3 {
         float nota3;
         String nota3Str;
         
+        double notaMedia;
+        
         nota1Str = JOptionPane.showInputDialog("Escribe la nota nº 1");
         nota1=Float.parseFloat(nota1Str);
         
@@ -27,7 +29,11 @@ public class ejer3 {
         
         
         //OPERACIONES
+        notaMedia=(nota1+nota2+nota3)/3;
         
+        
+        JOptionPane.showMessageDialog(null, "Tu nota media es de: " + notaMedia);
+
         
     }
 }
