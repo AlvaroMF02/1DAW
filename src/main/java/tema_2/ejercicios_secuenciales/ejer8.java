@@ -27,7 +27,6 @@ public class ejer8 {
         presupPediatria = presupuesto * 0.3;
 
         //RESULTADO
-       
         String resultados = """
                            
                            RESULTADOS
@@ -37,6 +36,6 @@ public class ejer8 {
                            """.formatted(presupGinecologia, presupTraumatologia, presupPediatria);
 
         System.out.println(resultados);
-         
+
     }
 }
