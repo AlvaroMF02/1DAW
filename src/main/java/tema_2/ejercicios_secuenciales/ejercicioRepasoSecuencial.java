@@ -43,7 +43,7 @@ public class ejercicioRepasoSecuencial {
         resultado = """
                     *********************************************
                                 COMPRA DEL DIA
-                    Descuento:                               %.2f
+                    Descuento:                              %.2f
                     Precio producto:                 %.2f
                     Cantidad:                                  %d
                     ---------------------------------------------
