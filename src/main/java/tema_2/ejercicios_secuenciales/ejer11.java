@@ -24,7 +24,10 @@ public class ejer11 {
         alturaString = JOptionPane.showInputDialog("Indica la altura de la figura");
         altura = Double.parseDouble(alturaString);
 
-        //r = Double.parseDouble(JOptionPane.showInputDialog("¿Cuanto mide el radio del semi circulo?"));
+        /*  MANERA RAPIDA Y MEJOR
+            r = Double.parseDouble(JOptionPane.showInputDialog("¿Cuanto mide el radio del semi circulo?"));
+        */
+        
         //OPERACIONES
         //CALCULAR AREA DEL SEMICIRCULO
         areaSemicirculo = Math.PI * (radio * 2); //cambiar exponentes Math.pow
@@ -35,6 +38,6 @@ public class ejer11 {
         //AREA TOTAL
         areaTotal = areaSemicirculo + areaTriangulo;
 
-        JOptionPane.showMessageDialog(null, "El area de la figura es de " + Math.rint(areaTotal * 100) / 100); //quito decimales
+        JOptionPane.showMessageDialog(null, "El area de la figura es de " + Math.round(areaTotal * 100) / 100); //quito decimales
     }
 }
