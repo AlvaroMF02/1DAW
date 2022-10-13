@@ -16,7 +16,6 @@ public class Explicaciones {
         boolean letraContenida;
         int indice;
         String resultado;
-        
 
         System.out.println("¿Como te llamas?");
         nombre = teclado.nextLine();
@@ -28,19 +27,19 @@ public class Explicaciones {
         //CARACTERES QUE TIENE EL NOMBRE Y LA POSICION EN LA QUE ESTA LA LETRA
         //EN OTRO CASO VEREMOS SI EL NUMERO DE LETRAS ES PAR O IMPAR
         
-        //SENTENCIA BOOLEANA
+        //sentencia booleana para ver si el nombre contiene la letra
         letraContenida = nombre.contains(letraBuscar);
 
         if (letraContenida) {
             System.out.println("Carácteres:" + nombre.length());
             //sumo 1 para que se vea mejor la posicion, lo mejor es quitarla 
             //por si trabajamos con la posicion
-            indice = nombre.indexOf(letraBuscar)+1;
-            System.out.println("La letra " + letraBuscar + " está en la posicion " 
+            indice = nombre.indexOf(letraBuscar) + 1;
+            System.out.println("La letra " + letraBuscar + " está en la posicion "
                     + indice);
-        }else{
-            System.out.println("Carácteres:" + nombre.length());  
-            resultado = (nombre.length()%2==0)?"ES PAR":"ES IMPAR";     //OPRERADOR TERNARIO
+        } else {
+            System.out.println("Carácteres:" + nombre.length());
+            resultado = (nombre.length() % 2 == 0) ? "ES PAR" : "ES IMPAR";     //OPRERADOR TERNARIO
             System.out.println(resultado);
         }
 
