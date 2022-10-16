@@ -1,4 +1,4 @@
-package tema_3.ejercicios_control;
+package tema_3.ejercicios_seleccion;
 
 import java.util.Scanner;
 
