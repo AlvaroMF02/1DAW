@@ -12,7 +12,7 @@ public class Ejer3 {
         boolean unaCondicion = true;
         resultado = unaCondicion ? valor1 : valor2;
         
-        SIEPRE SALE valor1 YA QUE SIEMPRE SERÁ TRUE
+        SIEMPRE SALE valor1 YA QUE SIEMPRE SERÁ TRUE
          */
  /* B
         int x = 10;
