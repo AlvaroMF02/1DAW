@@ -20,46 +20,53 @@ public class SiwtchRandom {
         String letra;
         int alea;
 
-//        //GENERAR NUMERO ALEATORIO
-//        alea=generador.nextInt();
-//        System.out.println("El numero es:"+alea );
-//        
-//        //GENERAR NUMERO ALEATORIO ENTRE UN RANGO
-//        //0-9
-//        alea=generador.nextInt(10);
-//        System.out.println("El numero es:"+alea );
-//        
-//        //GENERAR NUMERO ALEATORIO ENTRE UN RANGO
-//        //1-19
-//        alea=generador.nextInt(19)+1;
-//        System.out.println("El numero es:"+alea );
-//        
-//        
-//        //GENERAR NUMERO ALEATORIO ENTRE UN RANGO
-//        //12-18
-//        alea=generador.nextInt(7)+12;           //(mayor - menor + 1) + menor
-//        System.out.println("El numero es:"+alea );
-//        
+        
+        System.out.println("****************************************");
+        System.out.println("PRUEBAS");
+        //GENERAR NUMERO ALEATORIO
+        alea=generador.nextInt();
+        System.out.println("El numero es:"+alea );
+        
+        //GENERAR NUMERO ALEATORIO ENTRE UN RANGO
+        //0-9
+        alea=generador.nextInt(10);
+        System.out.println("El numero es:"+alea );
+        
+        //GENERAR NUMERO ALEATORIO ENTRE UN RANGO
+        //1-19
+        alea=generador.nextInt(19)+1;
+        System.out.println("El numero es:"+alea );
+
+        //GENERAR NUMERO ALEATORIO ENTRE UN RANGO
+        //12-18
+        alea=generador.nextInt(7)+12;           //(mayor - menor + 1) + menor
+        System.out.println("El numero es:"+alea );
+        
+        System.out.println("****************************************");
+        
+        
+        
+        
         System.out.println("Introduce una letra (A, B, C, D o E)");
         letra = teclado.nextLine();
 
         switch (letra) {
-            case "A","B","C":   //1-10
+            case "A","B","C" -> {//1-10
                 alea = generador.nextInt(10) + 1;
                 System.out.println("El numero es:" + alea);
-                break;
-            case "D":           //11-25
+            }
+            case "D" -> {//11-25
                 alea = generador.nextInt(15) + 11;
                 System.out.println("El numero es:" + alea);
-                break;
-            case "E":          //26-33
+            }
+            case "E" -> {//26-33
                 alea = generador.nextInt(8) + 26;
                 System.out.println("El numero es:" + alea);
-                break;
-            default:             //34-100
+            }
+            default -> {//34-100
                 alea = generador.nextInt(67) + 34;
                 System.out.println("El numero es:" + alea);
-                break;
+            }
         }
 
     }
