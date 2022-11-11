@@ -1,4 +1,4 @@
-package tema_4.POOexplicacion;
+package tema_4.explicaicionPOO;
 
 /**
  * PREGUNTAS
