@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class MisVehiculos {
 
+    //HACER 7, 8, 9
     public static void main(String[] args) {
 
         //INSTANCIACION DE LA CLASE SCANNER
