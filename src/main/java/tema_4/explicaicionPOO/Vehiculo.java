@@ -1,11 +1,11 @@
 package tema_4.explicaicionPOO;
 
 /**
-   PREGUNTAS
+   PREGUNTAS (CREDITOS: FERNANDO)
   -----------------------------------------------------------------------------
+  
  * ¿Qué es un programa orientado a objetos?
-
-   Es un modelo de programación informática que organiza el diseño de software en
+    Es un modelo de programación informática que organiza el diseño de software en
     torno a datos u objetos, en lugar de funciones y lógica. Un objeto se puede
     definir como un campo de datos que tiene atributos y comportamiento únicos.
 
@@ -24,12 +24,9 @@ package tema_4.explicaicionPOO;
 
  *  ¿Qué ventajas aporta la POO?
     -Facilita la reutilizacion del software a traves de la herencia, la encapsulacion
-    y el polimorfimos que son las herramientas mas potentes del paradigma de la POO
-
+     y el polimorfimos que son las herramientas mas potentes del paradigma de la POO
     -Facilita la construccion de programas portables
-
     -Facilita el mantenimiento
-
     -Provoca que las tareas de anilisis diseño e implementacion sean mas 
     ya que se manejan objetos
 
@@ -62,7 +59,7 @@ package tema_4.explicaicionPOO;
     crear una instancia de un tipo de objeto definido por el usuario
 
  *  ¿Cuál es la función del método main()?
-    omo punto de partida para la ejecución del programa. Normalmente, controla la
+    Como punto de partida para la ejecución del programa. Normalmente, controla la
     ejecución del programa dirigiendo las llamadas a otras funciones del programa.
 
  *  ¿Cómo se declara el método main()?
@@ -72,6 +69,8 @@ package tema_4.explicaicionPOO;
   -------------------------------------------------------------------------------
  
  */
+
+
 //DEFINICION (DONDE DICES QUE ES UNA CLASE, PUBLICA, QUE SE LLAMA VEHICULO)
 public class Vehiculo {
 
