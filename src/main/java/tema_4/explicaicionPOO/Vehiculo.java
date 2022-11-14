@@ -1,49 +1,76 @@
 package tema_4.explicaicionPOO;
 
 /**
- * PREGUNTAS
- * -----------------------------------------------------------------------------
- * ¿Qué es un programa orientado a objetos? Es un molde donde vamos a indicar
- * los atributos y metodos de los objetos que queremos modelas
- *
- * ¿Qué es una clase? Es una variable de tipo referencia que contiene los datos
- * concretos de una instancia de una clase
- *
- * ¿Qué es un objeto?
- *
- *
- * ¿Cuáles son los pilares de la POO? Explica brevemente cada uno de ellos.
- * Definicion, atributos y metodos
- *
- * ¿Qué ventajas aporta la POO?
- *
- *
- * ¿Cuáles son las partes de una clase?
- *
- *
- * ¿Qué elementos componen la definición de una clase? Explica brevemente cada
- *
- *
- * ¿Qué es un método constructor?
- *
- *
- * ¿Qué son los métodos de consulta o getters?
- *
- *
- * ¿Qué son los métodos modificadores o setters?
- *
- *
- * ¿En qué consiste la instanciación de un objeto? ¿Para qué sirve el operador
- * ‘new’?
- *
- *
- * ¿Cuál es la función del método main()? ¿Cómo se declara el método main()?
- *
- *
- * ¿Cómo interaccionan los objetos de una aplicación?
- *
- * -------------------------------------------------------------------------------
- *
+   PREGUNTAS
+  -----------------------------------------------------------------------------
+ * ¿Qué es un programa orientado a objetos?
+
+   Es un modelo de programación informática que organiza el diseño de software en
+    torno a datos u objetos, en lugar de funciones y lógica. Un objeto se puede
+    definir como un campo de datos que tiene atributos y comportamiento únicos.
+
+ *  ¿Qué es una clase?
+    Una clase es un molde donde vamos a indicar los atributos y metodos de los objetos
+    que queremos modelar
+
+ *  ¿Qué es un objeto?
+    Es una variable de tipo referencia que contiene los datos concretos de una instancia de una clase
+
+ *  ¿Cuáles son los pilares de la POO? Explica brevemente cada uno de ellos.
+    -Encapsulamiento 
+    -Herencia La herencia permite crear nuevas clases a partir de otras ya creadas
+    -Polimorfismo Que puede adoptar muchas formas
+    -Abstraccion Consiste en captar la características esenciales de un objeto, así como su comportamiento
+
+ *  ¿Qué ventajas aporta la POO?
+    -Facilita la reutilizacion del software a traves de la herencia, la encapsulacion
+    y el polimorfimos que son las herramientas mas potentes del paradigma de la POO
+
+    -Facilita la construccion de programas portables
+
+    -Facilita el mantenimiento
+
+    -Provoca que las tareas de anilisis diseño e implementacion sean mas 
+    ya que se manejan objetos
+
+ *  ¿Cuáles son las partes de una clase?
+    -Definicion 
+    -Atributos
+    -Metodos
+
+ *  ¿Qué elementos componen la definición de una clase? Explica brevemente cada uno
+    -Objetos Elementos tangibles o intangibles del sistema es decir los sustantivos
+    -Atributos Las caracteristicas de los objetos
+    -Metodos Acciones que deben realizar
+
+ *  ¿Qué es un método constructor?
+    sirven para “crear”  objetos de una clase en especifico
+
+
+ *  ¿Qué son los métodos de consulta o getters?
+    Son metodos para  recibir datos
+
+
+ *  ¿Qué son los métodos modificadores o setters?
+    Son metodos para enviar datos
+
+ *  ¿En qué consiste la instanciación de un objeto?
+    Se llama instancia a todo objeto que derive de algún otro. De esta forma, todos
+    los objetos son instancias de algún otro, menos la clase Object que es la madre de toda
+
+ *  ¿Para qué sirve el operador ‘new’?
+    crear una instancia de un tipo de objeto definido por el usuario
+
+ *  ¿Cuál es la función del método main()?
+    omo punto de partida para la ejecución del programa. Normalmente, controla la
+    ejecución del programa dirigiendo las llamadas a otras funciones del programa.
+
+ *  ¿Cómo se declara el método main()?
+    public static void main(String[] args) {
+    }
+ 
+  -------------------------------------------------------------------------------
+ 
  */
 //DEFINICION (DONDE DICES QUE ES UNA CLASE, PUBLICA, QUE SE LLAMA VEHICULO)
 public class Vehiculo {
