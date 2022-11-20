@@ -21,7 +21,7 @@ public class CalculoCuenta {
         saldoTotal = cuenta.getSaldo() + cuenta.getSaldo() * interes;
         cuenta.setSaldo(saldoTotal);
 
-        System.out.println("Tu saldo es de " + saldoTotal);
+        System.out.println("Tu saldo es de " + saldoTotal + "\n");
 
     }
 
@@ -34,7 +34,7 @@ public class CalculoCuenta {
 
         cuenta.setSaldo(cuenta.getSaldo() + cantidad);
 
-        System.out.println("\nTu saldo actual es de: " + cuenta.getSaldo());
+        System.out.println("\nTu saldo actual es de: " + cuenta.getSaldo() + "\n");
 
     }
     
@@ -45,7 +45,7 @@ public class CalculoCuenta {
         System.out.println("Tu saldo actual es de: " + cuenta.getSaldo());
         
         System.out.println("\nLa cantidad a retirar es: " + cantidad);
-        
+        teclado.nextLine();
         //BUCLE PARA FILTRAR EL DINERO
         do {            
             if (cantidad < cuenta.getSaldo()) {
@@ -55,6 +55,6 @@ public class CalculoCuenta {
             }
         } while (cantidad < cuenta.getSaldo());
         
-        System.out.println("\nTu saldo actual es de: " + cuenta.getSaldo());
+        System.out.println("\nTu saldo actual es de: " + cuenta.getSaldo() + "\n");
     }
 }

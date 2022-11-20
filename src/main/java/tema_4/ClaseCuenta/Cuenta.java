@@ -75,7 +75,7 @@ public class Cuenta {
     //TOSTRING
     @Override
     public String toString() {
-        return "Cuenta ->" + "\nCUENTA: " + nCeunta + "\nNIF: " + nif + "\nNOMBRE: " + nombre + "\nSALDO: " + saldo + "\nINTERES: " + interes;
+        return "Cuenta ->" + "\nNUMERI DE CUENTA: " + nCeunta + "\nNIF: " + nif + "\nNOMBRE: " + nombre + "\nSALDO: " + saldo + "\nINTERES: " + interes;
     }
 
 }
