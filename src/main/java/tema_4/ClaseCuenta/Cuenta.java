@@ -21,7 +21,13 @@ public class Cuenta {
         this.nif = nif;
         this.nombre = nombre;
         this.saldo = saldo;
-        this.interes = interes;
+
+        if (interes < 0.1 || interes > 0.3) {
+            this.interes = 0.1;
+        } else {
+            this.interes = interes;
+        }
+
     }
 
     //CONSTRUCTOR PARAMETRIZADOCON LA CUENTA ALEATORIA
@@ -66,7 +72,7 @@ public class Cuenta {
         this.interes = interes;
     }
 
-    public String generarCuenta() {
+    private String generarCuenta() {
         String cuenta;
         cuenta = RandomStringUtils.randomNumeric(20);
         return cuenta;
