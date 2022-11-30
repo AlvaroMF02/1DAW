@@ -34,9 +34,11 @@ public class MisSeries {
         
         Serie LosSimpson2 = ServicioSerie.copiar(LosSimpson);
         System.out.println(LosSimpson2);
+        //COMPARO
         copia = LosSimpson.equals(LosSimpson2);
-        System.out.println(copia);              //ME SALE FALSO
+        System.out.println(copia);
         
+        //HASHCODE LAS DOS SERIES IGUALES
         System.out.println(LosSimpson2.hashCode());
         System.out.println(LosSimpson.hashCode());
         
