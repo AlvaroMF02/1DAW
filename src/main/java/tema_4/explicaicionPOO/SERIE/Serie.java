@@ -1,5 +1,7 @@
 package tema_4.explicaicionPOO.SERIE;
 
+import java.util.Objects;
+
 /**
  *
  * @author alvaro
@@ -90,5 +92,49 @@ public class Serie {
     public String toString() {
         return "Serie:" + "\ntitulo = " + titulo + "\nenero = " + genero + "\nsinopsis = " + sinopsis + "\nproductor = " + productor + "\nTemporadas = " + nTemporadas + "\nLIKES = " + nLikes + "\n";
     }
+    
+    //EQUALS , HASHCODE
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 53 * hash + Objects.hashCode(this.titulo);
+        hash = 53 * hash + Objects.hashCode(this.genero);
+        hash = 53 * hash + Objects.hashCode(this.sinopsis);
+        hash = 53 * hash + Objects.hashCode(this.productor);
+        hash = 53 * hash + this.nTemporadas;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+   
+        final Serie other = (Serie) obj;
+   
+        if (this.nTemporadas != other.nTemporadas) {
+            return false;
+        }
+        if (!Objects.equals(this.titulo, other.titulo)) {
+            return false;
+        }
+        if (!Objects.equals(this.genero, other.genero)) {
+            return false;
+        }
+        if (!Objects.equals(this.sinopsis, other.sinopsis)) {
+            return false;
+        }
+        return Objects.equals(this.productor, other.productor);
+    }
+    
+    
     
 }

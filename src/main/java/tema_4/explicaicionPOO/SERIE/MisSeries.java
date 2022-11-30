@@ -19,12 +19,29 @@ public class MisSeries {
         //######################################################################
         
         //CREAR UN OBJETO SERIE LEYENDO LOS DATOS POR TECLADO
-        Serie peakeBlinders = ServicioSerie.leerTecladoSerie();
-        System.out.println(peakeBlinders);
+//        Serie peakeBlinders = ServicioSerie.leerTecladoSerie();
+//        System.out.println(peakeBlinders);
+//        
+//        
+//        //DAR LIKE A UNA
+//        ServicioSerie.darLike(LosSimpson);
+//        System.out.println(LosSimpson);
+        
+        //######################################################################
+        //COMPARAR
+        boolean copia = LosSimpson.equals(house);
+        System.out.println(copia);
+        
+        Serie LosSimpson2 = ServicioSerie.copiar(LosSimpson);
+        System.out.println(LosSimpson2);
+        copia = LosSimpson.equals(LosSimpson2);
+        System.out.println(copia);              //ME SALE FALSO
+        
+        System.out.println(LosSimpson2.hashCode());
+        System.out.println(LosSimpson.hashCode());
         
         
-        //DAR LIKE A UNA
-        ServicioSerie.darLike(LosSimpson);
-        System.out.println(LosSimpson);
+        
+        
     }
 }

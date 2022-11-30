@@ -29,7 +29,7 @@ public class ServicioSerie {
         System.out.println("TEMPORADAS: ");
         int temporadasSeries = teclado.nextInt();
 
-        System.out.println("LINKES: ");
+        System.out.println("LIKES: ");
         int likesSerie = teclado.nextInt();
 
         teclado.nextLine();
@@ -48,6 +48,18 @@ public class ServicioSerie {
         if (respuesta.equalsIgnoreCase("si")) {
             serie.darLike();
         }
+    }
+    
+    public static Serie copiar(Serie ser){
+        Serie copia = new Serie();
+        
+        copia.setGenero(ser.getGenero());
+        copia.setProductor(ser.getProductor());
+        copia.setSinopsis(ser.getSinopsis());
+        copia.setTitulo(ser.getTitulo());
+        copia.setnTemporadas(ser.getnTemporadas());
+        
+        return copia;
     }
     
 
