@@ -31,7 +31,7 @@ public class Ejer02 {
         }
 
         //HACER LA MEDIA
-        media = total / cantiPerson;
+        media = (double)total / cantiPerson;
         System.out.println(media);      //LA MEDIA NO SALE EXACTA
     }
 }
