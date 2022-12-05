@@ -29,11 +29,6 @@ public class OrdenarArrays {
         for (int i : numeros) {
             System.out.print(i + ", ");
         }
-        
-        
-        
-        
-        
 
         //METODO SORT CLASE ARRAYS
         int[] array = {3, 2, 1, 9};
