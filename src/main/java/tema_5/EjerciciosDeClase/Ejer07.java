@@ -28,9 +28,9 @@ public class Ejer07 {
         }
 
         mostrar(lista1);
-        System.out.println("");
+        System.out.println("\n###");
         mostrar(lista2);
-        System.out.println("");
+        System.out.println("\n###");
         multiplicado = multiplicar(lista1, lista2);
 
         mostrar(multiplicado);
