@@ -32,6 +32,14 @@ public class Ejer06 {
         
         comparacion = compararArrays(array1, array3);
         System.out.println("Comparacion 1 y 3: " + comparacion);
+        
+        
+//        boolean miau = array1.hashCode() != array4.hashCode();
+//        System.out.println(miau);
+//         miau = array1.hashCode() != array2.hashCode();
+//        System.out.println(miau);
+        
+        
     }
 
     //COMPARAR CADA ARRAY
