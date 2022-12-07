@@ -48,21 +48,29 @@ public class Ejer01 {
         //CONTADOR DEL MISMO TAMAÑO Q EL ARRAY
         int contador = aux.length;
         
+//        if (aux.length/2 != aux.length/2) {     HACERLO PARA IMPAR
+//            
+//            
+//        }
+        
         
         //VER SI EL ARRAY ES CAPICUA
-        System.out.println(contador);               //SOLO HACE El PRIMERO, CAMBIARLO PARA QUE TAMBIEN MIRE LOS DE DENTRO
-        for (int i = 0; i < aux.length; i++) {          //HACERLO PARA IMPAR
-
-            if (aux[i] != aux[contador - 1]) {
+        System.out.println(contador);
+        for (int i = 0; i < aux.length; i++) {      
+            
+            contador--;
+            
+            if (aux[i] != aux[contador]) {
 
                 comprobacion = false;
+                break;
 
             } else {
 
                 comprobacion = true;
             }
 
-            contador--;
+
 
         }
 
