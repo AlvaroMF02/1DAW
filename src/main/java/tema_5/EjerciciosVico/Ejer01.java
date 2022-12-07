@@ -49,7 +49,6 @@ public class Ejer01 {
         int contador = aux.length;
 
         //VER SI EL ARRAY ES CAPICUA
-        System.out.println(contador);
         for (int i = 0; i < aux.length; i++) {
 
             contador--;

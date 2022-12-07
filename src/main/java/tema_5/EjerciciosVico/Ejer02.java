@@ -18,6 +18,9 @@ public class Ejer02 {
     public static void main(String[] args) {
         Random alea = new Random();
 
+        System.out.println("¿Cuántas palabras raras quieres crear?");
+        
+        
         //NUMREO ENTRE 15 Y 26
         int numAlea = alea.nextInt(15, 25);
         int aleatorio;
