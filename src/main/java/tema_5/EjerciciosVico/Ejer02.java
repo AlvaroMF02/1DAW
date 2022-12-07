@@ -18,7 +18,7 @@ public class Ejer02 {
     public static void main(String[] args) {
         Random alea = new Random();
 
-        System.out.println("¿Cuántas palabras raras quieres crear?");
+        System.out.println("¿Cuántas palabras raras quieres crear?");           //HACERLO PARA QUE EL USUSARIO TE PIDA LA CANTIDAD DE PALABRAS Y GUARDARLS EN UN ARRAY
         
         
         //NUMREO ENTRE 15 Y 26
