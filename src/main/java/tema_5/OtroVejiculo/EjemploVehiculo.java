@@ -12,8 +12,10 @@ public class EjemploVehiculo {
         
         
         catalogo.mostrarCatalogo();
+        System.out.println("*******************************");
         
-        
+        catalogo.borrarVehiculo(catalogo.getListaVehiculo()[6]);
+        catalogo.mostrarCatalogo();
         
         
     }
