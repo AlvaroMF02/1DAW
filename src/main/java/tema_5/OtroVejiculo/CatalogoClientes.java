@@ -49,22 +49,19 @@ public class CatalogoClientes {
     }
 
     //BORRAR CLIENTE DEL CATALOGO
-    public boolean borrarCliente(Cliente aux) {
+    public void borrarCliente(Cliente aux) {
 
         int posicion = buscarCliente(aux);
 
         if (posicion >= 0) {
             this.listaCliente[posicion] = null;
             this.numCliente--;
-            return true;
         }
-
-        return false;
     }
 
     //CREAR UNA COPIA CON MAS GRANDE PARA AÑADIR OTRO VEHICULO
     //SI HAY HUECO EN EL ARRAY SE INSERTA UN VEHICULO NUEVO
-    public void anadirVehiculo(Cliente cli) {
+    public void anadirCliente(Cliente cli) {
         //HAY HUECO
         if (this.numCliente < this.listaCliente.length) {
 
@@ -80,13 +77,10 @@ public class CatalogoClientes {
 
         } else {  //CASO EN EL QUE EL ARRAY ESTA LLENO
 
-            
             //this.listaCliente = Arrays.copyOf(this.listaCliente, ++this.numCliente);    //CREAO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
-            //CREAR UNA COPIA CON UN ESPACIO MAS
             this.listaCliente = copia();
             this.listaCliente[this.numCliente - 1] = cli;
 
-            System.out.println("Se guarda Cliente nuevo");
         }
 
     }
