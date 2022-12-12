@@ -8,14 +8,6 @@ import java.util.Arrays;
  */
 public class CatalogoVehiculos {
 
-    
-    //CREAR METODO COPIAR PRIVADO
-    
-    //CATALOGO DE CLIENTES
-            //NOMBRE
-            //APELLIDO
-            //NIF
-    
     private int numeroVehiculo;
     private Vehiculo[] listaVehiculo;
 
@@ -42,7 +34,6 @@ public class CatalogoVehiculos {
     public Vehiculo[] getListaVehiculo() {
         return listaVehiculo;
     }
-
 
     public void mostrarCatalogo() {
         for (Vehiculo v : listaVehiculo) {
@@ -71,14 +62,14 @@ public class CatalogoVehiculos {
             this.numeroVehiculo--;
             return true;
         }
-        
+
         return false;
     }
 
     //CREAR UNA COPIA CON MAS GRANDE PARA AÑADIR OTRO VEHICULO
     //SI HAY HUECO EN EL ARRAY SE INSERTA UN VEHICULO NUEVO
     public void anadirVehiculo(Vehiculo v) {
-        
+
         //HAY HUECO
         if (this.numeroVehiculo < this.listaVehiculo.length) {
             //BUSCAR EL ESPACIO EN NULL
@@ -91,44 +82,42 @@ public class CatalogoVehiculos {
                     break;
                 }
             }
-        }else{  //CASO EN EL QUE EL ARRAY ESTA LLENO
-            
+        } else {  //CASO EN EL QUE EL ARRAY ESTA LLENO
+
             this.listaVehiculo = Arrays.copyOf(this.listaVehiculo, ++this.numeroVehiculo);    //CREAO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
-            
+
             this.listaVehiculo[this.numeroVehiculo - 1] = v;
-            
+
             System.out.println("Se guarda vehiculo nuevo");
         }
-        
-        
+
     }
 
     public String toString() {
         String tmp = "";
 
-        
-        
         for (Vehiculo v : listaVehiculo) {
-            
-            if (v!= null) {
+
+            if (v != null) {
                 tmp += v.toString() + "\n";         //DA ERROR NULL POINTER
-            }   
-            
+            }
+
             tmp += v.toString() + "\n";
         }
 
         return tmp;
     }
-    
-    
+
     //METODO COPIA
-    private  CatalogoVehiculos[] copia(CatalogoVehiculos cat){
-        
-        CatalogoVehiculos [] copia;
-        
-        copia = Arrays.copyOf(cat, cat.getNumeroVehiculo() + 1);
-        
-        return copia;
-    }
-        
+//    private CatalogoVehiculos[] copia(CatalogoVehiculos aux) {
+//
+//        CatalogoVehiculos[] copia = new CatalogoVehiculos[aux.numeroVehiculo + 1];
+//        
+//        for (int i = 0; i < aux.numeroVehiculo; i++) {
+//            copia[i] = aux[i];
+//        }
+//        
+//        return copia;
+//    }
+
 }
