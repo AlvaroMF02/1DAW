@@ -6,4 +6,8 @@ package tema_5.OtroVejiculo;
  */
 public class CatalogoClientes {
     
+    
+    
+    
+    
 }

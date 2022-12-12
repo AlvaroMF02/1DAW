@@ -122,13 +122,13 @@ public class CatalogoVehiculos {
     
     
     //METODO COPIA
-//    private  CatalogoVehiculosBorrarBuscar[] copia(CatalogoVehiculosBorrarBuscar cat){
-//        
-//        CatalogoVehiculosBorrarBuscar [] copia;
-//        
-//        copia = Arrays.copyOf(cat, cat.getNumeroVehiculo());
-//        
-//        return copia;
-//    }
+    private  CatalogoVehiculos[] copia(CatalogoVehiculos cat){
+        
+        CatalogoVehiculos [] copia;
+        
+        copia = Arrays.copyOf(cat, cat.getNumeroVehiculo() + 1);
+        
+        return copia;
+    }
         
 }
