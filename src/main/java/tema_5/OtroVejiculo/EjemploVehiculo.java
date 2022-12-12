@@ -8,7 +8,7 @@ public class EjemploVehiculo {
     
     public static void main(String[] args) {
         
-        CatalogoVehiculosBorrarBuscar catalogo = new CatalogoVehiculosBorrarBuscar(10);
+        CatalogoVehiculos catalogo = new CatalogoVehiculos(10);
         System.out.println("Numero de vehiculos del catalogo " + catalogo.getNumeroVehiculo());
         
         

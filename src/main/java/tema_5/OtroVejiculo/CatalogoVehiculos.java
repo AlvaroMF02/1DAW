@@ -6,12 +6,20 @@ import java.util.Arrays;
  *
  * @author alvaro
  */
-public class CatalogoVehiculosBorrarBuscar {
+public class CatalogoVehiculos {
 
+    
+    //CREAR METODO COPIAR PRIVADO
+    
+    //CATALOGO DE CLIENTES
+            //NOMBRE
+            //APELLIDO
+            //NIF
+    
     private int numeroVehiculo;
     private Vehiculo[] listaVehiculo;
 
-    public CatalogoVehiculosBorrarBuscar(int tamanyo) {
+    public CatalogoVehiculos(int tamanyo) {
 
         tamanyo = Math.abs(tamanyo);
 
@@ -30,6 +38,7 @@ public class CatalogoVehiculosBorrarBuscar {
         return numeroVehiculo;
     }
 
+    //SE QUITA PARA QUE AL USARLO EN EL MAIN EL USUARIO NO VEA Q ES UN ARRAY . PRIVACIDAD
     public Vehiculo[] getListaVehiculo() {
         return listaVehiculo;
     }
@@ -110,5 +119,16 @@ public class CatalogoVehiculosBorrarBuscar {
 
         return tmp;
     }
-
+    
+    
+    //METODO COPIA
+//    private  CatalogoVehiculosBorrarBuscar[] copia(CatalogoVehiculosBorrarBuscar cat){
+//        
+//        CatalogoVehiculosBorrarBuscar [] copia;
+//        
+//        copia = Arrays.copyOf(cat, cat.getNumeroVehiculo());
+//        
+//        return copia;
+//    }
+        
 }
