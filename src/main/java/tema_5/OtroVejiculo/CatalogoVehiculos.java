@@ -83,7 +83,7 @@ public class CatalogoVehiculos {
             }
         } else {  //CASO EN EL QUE EL ARRAY ESTA LLENO
 
-            this.listaVehiculo = Arrays.copyOf(this.listaVehiculo, ++this.numeroVehiculo);    //CREAO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
+            this.listaVehiculo = Arrays.copyOf(this.listaVehiculo, ++this.numeroVehiculo);    //CREO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
 
             this.listaVehiculo[this.numeroVehiculo - 1] = v;
 
@@ -107,14 +107,14 @@ public class CatalogoVehiculos {
     }
 
     //METODO COPIA
-    private CatalogoVehiculos[] copia(CatalogoVehiculos aux) {
+    private Vehiculo[] copia() {
 
-        CatalogoVehiculos[] copia = new CatalogoVehiculos[aux.numeroVehiculo + 1];
-        
-        for (int i = 0; i < aux.numeroVehiculo; i++) {
-            copia[i] = aux[i];
+        Vehiculo[] copia = new Vehiculo[this.numeroVehiculo + 1];
+
+        for (int i = 0; i < this.listaVehiculo.length; i++) {
+            copia[i] = this.listaVehiculo[i];
         }
-        
+
         return copia;
     }
 

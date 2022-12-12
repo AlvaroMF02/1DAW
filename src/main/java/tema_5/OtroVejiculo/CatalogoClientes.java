@@ -62,15 +62,13 @@ public class CatalogoClientes {
         return false;
     }
 
-    
     //CREAR UNA COPIA CON MAS GRANDE PARA AÑADIR OTRO VEHICULO
     //SI HAY HUECO EN EL ARRAY SE INSERTA UN VEHICULO NUEVO
     public void anadirVehiculo(Cliente cli) {
         //HAY HUECO
         if (this.numCliente < this.listaCliente.length) {
-            
+
             //BUSCAR EL ESPACIO EN NULL
-            
             for (int i = 0; i < this.listaCliente.length; i++) {
                 //SI HAY ESPACIO SE GUARDA EN I
                 if (this.listaCliente[i] == null) {
@@ -79,20 +77,20 @@ public class CatalogoClientes {
                     break;                                              //SE GUARDA AL CLIENTE
                 }
             }
-            
+
         } else {  //CASO EN EL QUE EL ARRAY ESTA LLENO
 
-            //CAMBIAR LA COPIA POR EL METODO PARA COPIAR
             
-            this.listaCliente = Arrays.copyOf(this.listaCliente, ++this.numCliente);    //CREAO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
-
+            //this.listaCliente = Arrays.copyOf(this.listaCliente, ++this.numCliente);    //CREAO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
+            //CREAR UNA COPIA CON UN ESPACIO MAS
+            this.listaCliente = copia();
             this.listaCliente[this.numCliente - 1] = cli;
 
-            System.out.println("Se guarda vehiculo nuevo");
+            System.out.println("Se guarda Cliente nuevo");
         }
 
     }
-    
+
     //TO STRING
     public String toString() {
 
@@ -106,8 +104,18 @@ public class CatalogoClientes {
 
         return tempo;
     }
-    
-    
-    //
+
+    //COPIA PRIVADA 
+    //PQ NO ES UNA COPIA DEL CATALOGO????
+    private Cliente[] copia() {
+
+        Cliente[] copia = new Cliente[this.numCliente + 1];
+
+        for (int i = 0; i < this.listaCliente.length; i++) {
+            copia[i] = this.listaCliente[i];
+        }
+
+        return copia;
+    }
 
 }
