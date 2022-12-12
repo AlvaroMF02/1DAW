@@ -69,7 +69,6 @@ public class CatalogoVehiculos {
     //CREAR UNA COPIA CON MAS GRANDE PARA AÑADIR OTRO VEHICULO
     //SI HAY HUECO EN EL ARRAY SE INSERTA UN VEHICULO NUEVO
     public void anadirVehiculo(Vehiculo v) {
-
         //HAY HUECO
         if (this.numeroVehiculo < this.listaVehiculo.length) {
             //BUSCAR EL ESPACIO EN NULL
@@ -108,15 +107,15 @@ public class CatalogoVehiculos {
     }
 
     //METODO COPIA
-//    private CatalogoVehiculos[] copia(CatalogoVehiculos aux) {
-//
-//        CatalogoVehiculos[] copia = new CatalogoVehiculos[aux.numeroVehiculo + 1];
-//        
-//        for (int i = 0; i < aux.numeroVehiculo; i++) {
-//            copia[i] = aux[i];
-//        }
-//        
-//        return copia;
-//    }
+    private CatalogoVehiculos[] copia(CatalogoVehiculos aux) {
+
+        CatalogoVehiculos[] copia = new CatalogoVehiculos[aux.numeroVehiculo + 1];
+        
+        for (int i = 0; i < aux.numeroVehiculo; i++) {
+            copia[i] = aux[i];
+        }
+        
+        return copia;
+    }
 
 }
