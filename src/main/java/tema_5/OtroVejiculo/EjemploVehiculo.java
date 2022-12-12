@@ -36,5 +36,7 @@ public class EjemploVehiculo {
         catalogo.anadirVehiculo(aux2);
         catalogo.mostrarCatalogo();
         System.out.println("Numeros de vehiculos: " + catalogo.getNumeroVehiculo());
+        
+        System.out.println(catalogo.toString());
     }
 }

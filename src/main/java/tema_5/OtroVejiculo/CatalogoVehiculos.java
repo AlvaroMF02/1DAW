@@ -99,10 +99,9 @@ public class CatalogoVehiculos {
         for (Vehiculo v : listaVehiculo) {
 
             if (v != null) {
-                tmp += v.toString() + "\n";         //DA ERROR NULL POINTER
+                tmp += v.toString() + "\n";
             }
 
-            tmp += v.toString() + "\n";
         }
 
         return tmp;

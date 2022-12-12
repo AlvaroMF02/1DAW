@@ -59,14 +59,19 @@ public class CatalogoClientes {
 
         return false;
     }
-    
-    
+
     //TO STRING
-    public String toString(){
-        
+    public String toString() {
+
         String tempo = "";
-        
-        
+
+        for (Cliente cli : listaCliente) {
+            if (cli != null) {
+                tempo += cli.toString() + "\n";
+            }
+        }
+
+        return tempo;
     }
 
 }
