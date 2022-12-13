@@ -48,7 +48,7 @@ public class Cliente {
     //TOSTRING
     @Override
     public String toString() {
-        return "Cliente{" + "Nombre=" + nombre + ", Apellido=" + apellido + ", NIF=" + nif + '}';
+        return "Cliente{" + "nombre=" + nombre + ", apellido=" + apellido + ", nif=" + nif + '}';
     }
 
     //EQUALS Y HASHCODE

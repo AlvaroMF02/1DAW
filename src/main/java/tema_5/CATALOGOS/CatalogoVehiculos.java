@@ -36,6 +36,7 @@ public class CatalogoVehiculos {
         return listaVehiculo;
     }
 
+    //MOSTRAR LOS VEHICULOS
     public void mostrarCatalogo() {
         for (Vehiculo v : listaVehiculo) {
             System.out.println(v);
@@ -43,6 +44,7 @@ public class CatalogoVehiculos {
 
     }
 
+    //BUSCAR VEHICULO
     public int buscarVehiculo(Vehiculo v) {
         //BUSQUEDA SECUENCIAL
         for (int i = 0; i < this.listaVehiculo.length; i++) {
@@ -54,6 +56,7 @@ public class CatalogoVehiculos {
         return -1;
     }
 
+    //BORRAR VEHICULO
     public boolean borrarVehiculo(Vehiculo v) {
 
         int pos = buscarVehiculo(v);

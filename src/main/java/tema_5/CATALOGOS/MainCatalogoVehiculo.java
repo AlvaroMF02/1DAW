@@ -17,13 +17,13 @@ public class MainCatalogoVehiculo {
         System.out.println("Numero de vehiculos del catalogo " + catalogo.getNumeroVehiculo());
         //MOSTRAR EL CATALOGO
         catalogo.mostrarCatalogo();
-        
+
         //BORRAR UN VEHICULO
         System.out.println("\n##### BORRAR UN VEHICULO #####");
         catalogo.borrarVehiculo(catalogo.getListaVehiculo()[6]);
         catalogo.mostrarCatalogo();
         System.out.println("Numeros de vehiculos despues de borrar uno: " + catalogo.getNumeroVehiculo());
-        
+
         //AÑADIR UN VEHICULO AL CATALOGO CUANDO HAY ESPACIO EN EN ARRAY
         System.out.println("\n##### AÑADIR VEHICULO EN UNA POSICION EN MEDIO #####");
         Vehiculo aux = new Vehiculo();
@@ -40,12 +40,10 @@ public class MainCatalogoVehiculo {
         catalogo.mostrarCatalogo();
         System.out.println("Numeros de vehiculos: " + catalogo.getNumeroVehiculo());
 
-
         //BUSCAR UN VEHICULO DEL CATALOGO
         System.out.println("\n##### BUSCAR UN VEHICULO #####");
         int posicion = catalogo.buscarVehiculo(aux);
-        
         System.out.println("El vehiculo buscado se encuentra en la posicion: " + posicion);
-        
+
     }
 }

@@ -11,6 +11,7 @@ public class CatalogoClientes {
     private int numCliente;
     private Cliente[] listaCliente;
 
+    //CONSTRUCTOR
     public CatalogoClientes(int tamanyo) {
 
         tamanyo = Math.abs(tamanyo);
@@ -25,7 +26,7 @@ public class CatalogoClientes {
 
     }
 
-    //GETTER
+    //GETTERS
     public int getNumCliente() {
         return numCliente;
     }
@@ -106,7 +107,6 @@ public class CatalogoClientes {
     }
 
     //COPIA PRIVADA 
-    //PQ NO ES UNA COPIA DEL CATALOGO????
     private Cliente[] copia() {
 
         Cliente[] copia = new Cliente[this.numCliente + 1];
