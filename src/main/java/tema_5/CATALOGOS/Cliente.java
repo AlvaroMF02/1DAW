@@ -1,4 +1,4 @@
-package tema_5.OtroVejiculo;
+package tema_5.CATALOGOS;
 
 import java.util.Objects;
 
