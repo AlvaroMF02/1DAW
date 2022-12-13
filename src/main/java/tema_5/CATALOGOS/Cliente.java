@@ -1,6 +1,7 @@
 package tema_5.CATALOGOS;
 
 import java.util.Objects;
+import org.apache.commons.lang3.RandomStringUtils;
 
 /**
  *
@@ -8,57 +9,49 @@ import java.util.Objects;
  */
 public class Cliente {
 
-    private String nombre;
-    private String apellido;
+    private NombresClie nombre;
+    private ApellidosCli apellido;
     private String nif;
 
     //CONSTRUCTORES
     public Cliente() {
-        this.nombre = "Pepe";
-        this.apellido = "Flores";
-        this.nif = "45974364L";
-    }
-
-    public Cliente(String nombre, String apellido, String nif) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.nif = nif;
+        this.nombre = NombresClie.getAleatorio();
+        this.apellido = ApellidosCli.getAleatorio();
+        this.nif = RandomStringUtils.randomAlphanumeric(9);
     }
 
     //GETTER SETTER
-    public String getNombre() {
+    public NombresClie getNombre() {
         return nombre;
     }
 
-    public String getApellido() {
+    public void setNombre(NombresClie nombre) {
+        this.nombre = nombre;
+    }
+
+    public ApellidosCli getApellido() {
         return apellido;
+    }
+
+    public void setApellido(ApellidosCli apellido) {
+        this.apellido = apellido;
     }
 
     public String getNif() {
         return nif;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     public void setNif(String nif) {
         this.nif = nif;
     }
-    
-    //TOSTRING
 
+    //TOSTRING
     @Override
     public String toString() {
         return "Cliente{" + "Nombre=" + nombre + ", Apellido=" + apellido + ", NIF=" + nif + '}';
     }
-    
-    //EQUALS Y HASHCODE
 
+    //EQUALS Y HASHCODE
     @Override
     public int hashCode() {
         int hash = 3;
@@ -82,6 +75,5 @@ public class Cliente {
         final Cliente other = (Cliente) obj;
         return Objects.equals(this.nif, other.nif);
     }
-    
-    
+
 }

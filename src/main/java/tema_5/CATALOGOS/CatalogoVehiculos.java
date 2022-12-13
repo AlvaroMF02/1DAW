@@ -11,6 +11,7 @@ public class CatalogoVehiculos {
     private int numeroVehiculo;
     private Vehiculo[] listaVehiculo;
 
+    //CONSTRUCTOR
     public CatalogoVehiculos(int tamanyo) {
 
         tamanyo = Math.abs(tamanyo);

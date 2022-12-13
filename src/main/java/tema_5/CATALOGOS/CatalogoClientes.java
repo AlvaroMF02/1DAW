@@ -29,6 +29,12 @@ public class CatalogoClientes {
     public int getNumCliente() {
         return numCliente;
     }
+    
+    //SE QUITA PARA QUE AL USARLO EN EL MAIN EL USUARIO NO VEA Q ES UN ARRAY . PRIVACIDAD
+    public Cliente[] getListaCliente() {
+        return listaCliente;
+    }
+    
 
     //MOSTRAR LOS CLIENTES
     public void mostrarCatal() {
