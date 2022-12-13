@@ -81,33 +81,18 @@ public class CatalogoVehiculos {
                 if (this.listaVehiculo[i] == null) {
                     this.listaVehiculo[i] = v;
                     this.numeroVehiculo++;
-                    System.out.println("Se guarda vehiculo en: " + i);
+                    //System.out.println("Se guarda vehiculo en: " + i);
                     break;
                 }
             }
         } else {  //CASO EN EL QUE EL ARRAY ESTA LLENO
 
-            this.listaVehiculo = Arrays.copyOf(this.listaVehiculo, ++this.numeroVehiculo);    //CREO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
-
-            this.listaVehiculo[this.numeroVehiculo - 1] = v;
-
-            System.out.println("Se guarda vehiculo nuevo");
+            //this.listaVehiculo = Arrays.copyOf(this.listaVehiculo, ++this.numeroVehiculo);    //CREO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
+            this.listaVehiculo = copia();
+            this.listaVehiculo[this.numeroVehiculo] = v;
+            this.numeroVehiculo++;
         }
 
-    }
-
-    public String toString() {
-        String tmp = "";
-
-        for (Vehiculo v : listaVehiculo) {
-
-            if (v != null) {
-                tmp += v.toString() + "\n";
-            }
-
-        }
-
-        return tmp;
     }
 
     //METODO COPIA
@@ -122,4 +107,18 @@ public class CatalogoVehiculos {
         return copia;
     }
 
+    //TO STRING
+    public String toString() {
+        String tmp = "";
+
+        for (Vehiculo v : listaVehiculo) {
+
+            if (v != null) {
+                tmp += v.toString() + "\n";
+            }
+
+        }
+
+        return tmp;
+    }
 }

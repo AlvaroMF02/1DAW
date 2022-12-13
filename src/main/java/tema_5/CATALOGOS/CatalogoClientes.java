@@ -84,14 +84,31 @@ public class CatalogoClientes {
 
         } else {  //CASO EN EL QUE EL ARRAY ESTA LLENO
 
-            //this.listaCliente = Arrays.copyOf(this.listaCliente, ++this.numCliente);    //CREAO UNA COPIA DEL ARRAY PERO CON UN ESPACIO MAS QUE SE QUEDARÁ A NULL
+            //this.listaCliente = Arrays.copyOf(this.listaCliente, ++this.numCliente);
             this.listaCliente = copia();
-            this.listaCliente[this.numCliente - 1] = cli;
-
+            this.listaCliente[this.numCliente] = cli;
+            this.numCliente++;
         }
 
     }
 
+    
+
+    //COPIA PRIVADA 
+    private Cliente[] copia() {
+
+        Cliente[] copia = new Cliente[this.numCliente + 1];
+
+        for (int i = 0; i < this.listaCliente.length; i++) {
+            copia[i] = this.listaCliente[i];
+        }
+
+        return copia;
+    }
+    
+    
+    
+    
     //TO STRING
     public String toString() {
 
@@ -105,17 +122,4 @@ public class CatalogoClientes {
 
         return tempo;
     }
-
-    //COPIA PRIVADA 
-    private Cliente[] copia() {
-
-        Cliente[] copia = new Cliente[this.numCliente + 1];
-
-        for (int i = 0; i < this.listaCliente.length; i++) {
-            copia[i] = this.listaCliente[i];
-        }
-
-        return copia;
-    }
-
 }

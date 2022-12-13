@@ -31,7 +31,7 @@ public class MainCatalogoClientes {
         System.out.println("##### AÑADIR CLIENTE EN UN ESPACIO #####");
         System.out.println("--------------------------------------");
         Cliente clienteNuevo = new Cliente();
-        clienteNuevo.setNif("123456789");
+        clienteNuevo.setNif("111111111111111");
         catalogo.anadirCliente(clienteNuevo);
         catalogo.mostrarCatal();
         System.out.println("Numeros de clientes al añadir uno nuevo: " + catalogo.getNumCliente());
@@ -41,7 +41,7 @@ public class MainCatalogoClientes {
         System.out.println("##### AÑADIR CLIENTE SIN ESPACIO #####");
         System.out.println("--------------------------------------");
         Cliente clienteNuevo2 = new Cliente();
-        clienteNuevo.setNif("987654321");
+        clienteNuevo2.setNif("2222222222222222");
         catalogo.anadirCliente(clienteNuevo2);
         catalogo.mostrarCatal();
         System.out.println("Numeros de clientes al añadir uno nuevo: " + catalogo.getNumCliente());
@@ -52,6 +52,11 @@ public class MainCatalogoClientes {
         System.out.println("--------------------------------------");
         int posicion = catalogo.buscarCliente(clienteNuevo);
         System.out.println("El cliente buscado esta en la posicion: " + posicion);
+        
+        //COMO SE VE EL CATALOGO DESPUES DE LOS CAMBIOS
+        System.out.println("\n--------------------------------------");
+        System.out.println("Así se veria el catalogo nuevo");
+        System.out.println(catalogo.toString());
 
     }
 }
