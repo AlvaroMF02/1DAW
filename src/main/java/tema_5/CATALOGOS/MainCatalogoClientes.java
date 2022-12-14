@@ -58,16 +58,5 @@ public class MainCatalogoClientes {
         System.out.println("Así se veria el catalogo nuevo");
         System.out.println(catalogo.toString());
 
-        
-        
-        
-        //**********************************************************************
-                                  //PRUEBA ALQUILER
-        //**********************************************************************
-        
-        
-        
-        
-        
     }
 }
