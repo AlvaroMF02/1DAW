@@ -62,7 +62,7 @@ public class CatalogoVehiculos {
     public Vehiculo buscarVehiculo(String bastidor) {
 
         Vehiculo aux = new Vehiculo();
-        aux.setBastidor(bastidor);            //FUEZO A QUE LE CLIENTE TENGA EL NIF Q BUSCO
+        aux.setBastidor(bastidor);            //FUEZO A QUE LE CLIENTE TENGA EL BASTIDOR Q BUSCO
         int posicion = buscarVehiculo(aux);
 
         return (posicion >= 0) ? this.listaVehiculo[posicion] : null;

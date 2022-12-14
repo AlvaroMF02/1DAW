@@ -20,8 +20,7 @@ public class CatalogoAlquiler {
 
     public CatalogoAlquiler() {
     }
-    
-    
+
     //GETTERS
     public int getNumAlquiler() {
         return numAlquiler;

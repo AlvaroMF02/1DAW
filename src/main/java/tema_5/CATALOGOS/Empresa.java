@@ -57,6 +57,51 @@ public class Empresa {
     
     
     //TO STRING GRANDOTE
+    public String toString(){
+        String resultado = "";
+        resultado = """
+                    ----------------------------------------------
+                    Empresa: %s
+                    CIF: %s 
+                    ----------------------------------------------
+                    
+                          ###### CATALOGO DE CLIENTES ######
+                    """.formatted(this.nombre,this.cif);
+        
+        //GUARDAR CATALOGO DE CLIENTES
+        for (Cliente listaCliente : this.catalogoCli.getListaCliente()) {
+            resultado += listaCliente+"\n";
+        }
+                        
+        resultado += "\n      ###### CATALOGO DE VEHICULOS ######\n";
+        //GUARDAR CATALOGO DE VEHICULOS
+        for (Vehiculo listaVehiculo : this.catalogoVehi.getListaVehiculo()) {
+            resultado += listaVehiculo+"\n";
+        }
+        
+        resultado += "\n      ###### CATALOGO DE ALQUILERES ######\n";
+        //GUARDAR CATALOGO DE ALQUILERES
+        for (Alquiler listaAlquiler : this.catalogoAlq.getListaAlquiler()) {
+            resultado += listaAlquiler+"\n";
+        }
+        resultado += "----------------------------------------------";
+        
+        return resultado;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //EQUALS Y HASHCODE
 

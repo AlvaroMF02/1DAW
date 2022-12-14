@@ -18,9 +18,7 @@ public class MainAlquileres {
         */
         
         
-//        
-//        Cliente c = new Cliente();
-//        Vehiculo v = new Vehiculo();
+
         CatalogoVehiculos cv = new CatalogoVehiculos(5);
         CatalogoClientes cc = new CatalogoClientes(5);
 
