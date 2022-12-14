@@ -15,11 +15,14 @@ public class MainEmpresa {
         Vehiculo veh = new Vehiculo();
         
         //AÑADIR A SUS CATALOGOS CORRESPONDIENTES
-        
-        
-        
-        
+        emp.registrarCliente(cli);
+        emp.regiustrarVehiculo(veh);
+        //MOSTRAR
         System.out.println(emp.toString());
 
+        //BUSCAR
+        emp.buscarCliente(cli);
+        emp.buscarVehiculo(veh);
+        
     }
 }
