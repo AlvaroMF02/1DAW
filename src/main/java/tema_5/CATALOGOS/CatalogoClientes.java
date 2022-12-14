@@ -30,12 +30,11 @@ public class CatalogoClientes {
     public int getNumCliente() {
         return numCliente;
     }
-    
+
     //SE QUITA PARA QUE AL USARLO EN EL MAIN EL USUARIO NO VEA Q ES UN ARRAY . PRIVACIDAD
     public Cliente[] getListaCliente() {
         return listaCliente;
     }
-    
 
     //MOSTRAR LOS CLIENTES
     public void mostrarCatal() {
@@ -47,26 +46,29 @@ public class CatalogoClientes {
     //BUSCAR UN CLIENTE DEL CATALOGO
     private int buscarCliente(Cliente aux) {        //PRIVADO PQ SOLO LO UTILIZO EN EL METODO DE ABAJO
 
-        for (int i = 0; i < this.listaCliente.length; i++) {
-            if (aux.equals(listaCliente[i])) {
-                return i;
+        if (aux != null) {
+            for (int i = 0; i < this.listaCliente.length; i++) {
+                //CAMBIOS PARA QUE NO COJA NULLS
+                if (aux.equals(listaCliente[i] != null && aux.equals(this.listaCliente[i]))) {
+                    return i;
+                }
             }
         }
+
         return -1;
     }
 
     //DEVUELVE UN CLIENTE 
-    public Cliente buscarCliente(String nif){
-        
+    public Cliente buscarCliente(String nif) {
+
         Cliente aux = new Cliente();
         aux.setNif(nif);            //FUEZO A QUE LE CLIENTE TENGA EL NIF Q BUSCO
         int posicion = buscarCliente(aux);
-        
+
         return (posicion >= 0) ? this.listaCliente[posicion] : null;
-                            //SI ES MAYOR P IGUAL A CERO DEVUELVE LA EL CLIENTE ENTERO
+        //SI ES MAYOR P IGUAL A CERO DEVUELVE LA EL CLIENTE ENTERO
     }
-    
-    
+
     //BORRAR CLIENTE DEL CATALOGO
     public void borrarCliente(Cliente aux) {
 
@@ -104,8 +106,6 @@ public class CatalogoClientes {
 
     }
 
-    
-
     //COPIA PRIVADA 
     private Cliente[] copia() {
 
@@ -117,10 +117,7 @@ public class CatalogoClientes {
 
         return copia;
     }
-    
-    
-    
-    
+
     //TO STRING
     public String toString() {
 

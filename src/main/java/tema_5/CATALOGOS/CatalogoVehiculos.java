@@ -43,17 +43,30 @@ public class CatalogoVehiculos {
         }
 
     }
+    //BUSCAR UN VEHICULO DEL CATALOGO
+    private int buscarVehiculo(Vehiculo v) {        //PRIVADO PQ SOLO LO UTILIZO EN EL METODO DE ABAJO
 
-    //BUSCAR VEHICULO
-    public int buscarVehiculo(Vehiculo v) {
-        //BUSQUEDA SECUENCIAL
-        for (int i = 0; i < this.listaVehiculo.length; i++) {
-            if (v.equals(listaVehiculo[i])) {
-                return i;
+        if (v != null) {
+            for (int i = 0; i < this.listaVehiculo.length; i++) {
+                //CAMBIOS PARA QUE NO COJA NULLS
+                if (v.equals(listaVehiculo[i] != null && v.equals(this.listaVehiculo[i]))) {
+                    return i;
+                }
             }
         }
 
         return -1;
+    }
+
+    //DEVUELVE UN CLIENTE 
+    public Vehiculo buscarVehiculo(String bastidor) {
+
+        Vehiculo aux = new Vehiculo();
+        aux.setBastidor(bastidor);            //FUEZO A QUE LE CLIENTE TENGA EL NIF Q BUSCO
+        int posicion = buscarVehiculo(aux);
+
+        return (posicion >= 0) ? this.listaVehiculo[posicion] : null;
+        //SI ES MAYOR O IGUAL A CERO DEVUELVE LA EL CLIENTE ENTERO
     }
 
     //BORRAR VEHICULO

@@ -42,8 +42,8 @@ public class MainCatalogoVehiculo {
 
         //BUSCAR UN VEHICULO DEL CATALOGO
         System.out.println("\n##### BUSCAR UN VEHICULO #####");
-        int posicion = catalogo.buscarVehiculo(aux);
-        System.out.println("El vehiculo buscado se encuentra en la posicion: " + posicion);
+        //LE PASO UN NIF Y ME MUESTRA EL TOSTRING DE CLIENTE
+        System.out.println("El cliente buscado esta en la posicion: " + catalogo.buscarVehiculo("3"));
 
     }
 }
