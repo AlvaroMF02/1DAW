@@ -14,9 +14,14 @@ public class CatalogoAlquiler {
     //CONSTRUCTOR
     public CatalogoAlquiler(int tamanyo) {
         tamanyo = Math.abs(tamanyo);
-        this.numAlquiler = tamanyo;
+        this.numAlquiler = 0;
+        this.listaAlquileres = new Alquiler[tamanyo];
     }
 
+    public CatalogoAlquiler() {
+    }
+    
+    
     //GETTERS
     public int getNumAlquiler() {
         return numAlquiler;
