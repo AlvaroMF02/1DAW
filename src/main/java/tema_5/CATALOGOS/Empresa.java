@@ -8,7 +8,7 @@ import org.apache.commons.lang3.RandomStringUtils;
  * @author alvaro
  */
 public class Empresa {
-    
+
     private String cif;
     private String nombre;
     private CatalogoAlquiler catalogoAlq;
@@ -17,16 +17,15 @@ public class Empresa {
 
     //CONSTRUCTOR
     public Empresa() {
-        
+
         this.cif = RandomStringUtils.randomAlphanumeric(9);
         this.nombre = RandomStringUtils.randomAlphabetic(5);
         this.catalogoAlq = new CatalogoAlquiler(10);
         this.catalogoCli = new CatalogoClientes(10);
         this.catalogoVehi = new CatalogoVehiculos(10);
     }
-    
-    //GETTER SETTER
 
+    //GETTER SETTER
     public String getCif() {
         return cif;
     }
@@ -54,10 +53,9 @@ public class Empresa {
     public void setCatalogoCli(CatalogoClientes catalogoCli) {
         this.catalogoCli = catalogoCli;
     }
-    
-    
+
     //TO STRING GRANDOTE
-    public String toString(){
+    public String toString() {
         String resultado = "";
         resultado = """
                     ----------------------------------------------
@@ -66,45 +64,50 @@ public class Empresa {
                     ----------------------------------------------
                     
                           ###### CATALOGO DE CLIENTES ######
-                    """.formatted(this.nombre,this.cif);
-        
+                    """.formatted(this.nombre, this.cif);
+
         //GUARDAR CATALOGO DE CLIENTES
         for (Cliente listaCliente : this.catalogoCli.getListaCliente()) {
-            resultado += listaCliente+"\n";
+            resultado += listaCliente + "\n";
         }
-                        
+
         resultado += "\n      ###### CATALOGO DE VEHICULOS ######\n";
         //GUARDAR CATALOGO DE VEHICULOS
         for (Vehiculo listaVehiculo : this.catalogoVehi.getListaVehiculo()) {
-            resultado += listaVehiculo+"\n";
+            resultado += listaVehiculo + "\n";
         }
-        
+
         resultado += "\n      ###### CATALOGO DE ALQUILERES ######\n";
         //GUARDAR CATALOGO DE ALQUILERES
         for (Alquiler listaAlquiler : this.catalogoAlq.getListaAlquiler()) {
-            resultado += listaAlquiler+"\n";
+            resultado += listaAlquiler + "\n";
         }
         resultado += "----------------------------------------------";
-        
+
         return resultado;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //EQUALS Y HASHCODE
 
+    //REGISTRAR CLIENTE
+    public void registrarCliente(Cliente c) {
+        this.catalogoCli.anadirCliente(c);
+    }
+
+    //BUSCAR CLIENTE
+    public void buscarCliente(Cliente c) {
+        this.catalogoCli.buscarCliente(c.getNif());
+    }
+
+    //REGISTRAR VEHICULO
+    public void regiustrarVehiculo(Vehiculo v) {
+        this.catalogoVehi.anadirVehiculo(v);
+    }
+
+    //BUSCAR VEHICULO
+    public void buscarVehiculo(Vehiculo v) {
+        this.catalogoVehi.buscarVehiculo(v.getBastidor());
+    }
+
+    //EQUALS Y HASHCODE
     @Override
     public int hashCode() {
         int hash = 7;
@@ -126,7 +129,5 @@ public class Empresa {
         final Empresa other = (Empresa) obj;
         return Objects.equals(this.cif, other.cif);
     }
-    
-    
-    
+
 }

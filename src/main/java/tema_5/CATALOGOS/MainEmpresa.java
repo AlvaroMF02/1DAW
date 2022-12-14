@@ -10,6 +10,15 @@ public class MainEmpresa {
 
         Empresa emp = new Empresa();
 
+        //CREO UN VEHICULO Y UN CILENTE NUEVO PARA HACER LAS PRUEBAS
+        Cliente cli = new Cliente();
+        Vehiculo veh = new Vehiculo();
+        
+        //AÑADIR A SUS CATALOGOS CORRESPONDIENTES
+        
+        
+        
+        
         System.out.println(emp.toString());
 
     }
