@@ -12,12 +12,17 @@ public class Cliente {
     private NombresClie nombre;
     private ApellidosCli apellido;
     private String nif;
+    private static int contador = 0;
 
     //CONSTRUCTORES
     public Cliente() {
         this.nombre = NombresClie.getAleatorio();
         this.apellido = ApellidosCli.getAleatorio();
-        this.nif = RandomStringUtils.randomAlphanumeric(9);
+        this.nif = String.valueOf(++contador);//RandomStringUtils.randomAlphanumeric(9);
+        
+        //PARA FACILITAR LA PRUEBA EN EL MAIN
+        //contador++;
+        //this.nif = String.valueOf(contador);
     }
 
     //GETTER SETTER
@@ -55,8 +60,8 @@ public class Cliente {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.nombre);
-        hash = 97 * hash + Objects.hashCode(this.apellido);
+//        hash = 97 * hash + Objects.hashCode(this.nombre);
+//        hash = 97 * hash + Objects.hashCode(this.apellido);
         hash = 97 * hash + Objects.hashCode(this.nif);
         return hash;
     }

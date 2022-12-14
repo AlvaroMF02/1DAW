@@ -22,7 +22,7 @@ public class MainCatalogoClientes {
         System.out.println("\n--------------------------------------");
         System.out.println("##### BORRAR UN CLIENTE #####");
         System.out.println("--------------------------------------");
-        catalogo.borrarCliente(catalogo.getListaCliente()[4]);
+        catalogo.borrarCliente(catalogo.getListaCliente()[4]);          //getnif de cliente para hacerlo sin el get ese
         catalogo.mostrarCatal();
         System.out.println("Numeros de clientes despues de borrar uno: " + catalogo.getNumCliente());
 
@@ -50,8 +50,8 @@ public class MainCatalogoClientes {
         System.out.println("\n--------------------------------------");
         System.out.println("##### BUSCAR CLIENTE #####");
         System.out.println("--------------------------------------");
-        int posicion = catalogo.buscarCliente(clienteNuevo);
-        System.out.println("El cliente buscado esta en la posicion: " + posicion);
+        //LE PASO UN NIF Y ME MUESTRA EL TOSTRING DE CLIENTE
+        System.out.println("El cliente buscado esta en la posicion: " + catalogo.buscarCliente("3"));
         
         //COMO SE VE EL CATALOGO DESPUES DE LOS CAMBIOS
         System.out.println("\n--------------------------------------");

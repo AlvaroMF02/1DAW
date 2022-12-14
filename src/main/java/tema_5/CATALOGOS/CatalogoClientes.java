@@ -45,7 +45,7 @@ public class CatalogoClientes {
     }
 
     //BUSCAR UN CLIENTE DEL CATALOGO
-    public int buscarCliente(Cliente aux) {
+    private int buscarCliente(Cliente aux) {        //PRIVADO PQ SOLO LO UTILIZO EN EL METODO DE ABAJO
 
         for (int i = 0; i < this.listaCliente.length; i++) {
             if (aux.equals(listaCliente[i])) {
@@ -55,6 +55,18 @@ public class CatalogoClientes {
         return -1;
     }
 
+    //DEVUELVE UN CLIENTE 
+    public Cliente buscarCliente(String nif){
+        
+        Cliente aux = new Cliente();
+        aux.setNif(nif);            //FUEZO A QUE LE CLIENTE TENGA EL NIF Q BUSCO
+        int posicion = buscarCliente(aux);
+        
+        return (posicion >= 0) ? this.listaCliente[posicion] : null;
+                            //SI ES MAYOR P IGUAL A CERO DEVUELVE LA EL CLIENTE ENTERO
+    }
+    
+    
     //BORRAR CLIENTE DEL CATALOGO
     public void borrarCliente(Cliente aux) {
 
