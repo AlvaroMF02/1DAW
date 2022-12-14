@@ -10,15 +10,17 @@ public class MainAlquileres {
 
     public static void main(String[] args) {
 
-        /*
-        CLASE EMPRESA CON (CIF,NOMBRE,CATALOGOCLI,CALTALOGOVEHI,CATALOGOALQUI) el catalquiler lo crea pero en null
-        METODOS: REGISRTAR CLIENTE, REGISTRAR VEHICULO, BUSCARCLIENTE(NIF), BUSCARVEHICULO(BASTIDOR)
-        HACER LOS CAMBIOS DE CLIENTE EN VEHICULO
-        HACER EL MAIN DE ALQUILER
-        */
+System.out.println("--------------------------------------");
+        System.out.println("PRUEBA DE LOS METODOS CATALOGOALQUILERES");
+        System.out.println("--------------------------------------");
         
+        //CREAR CATALOGO CON 10 CLIENTES ALEEATORIOS GRACIAS A LAS CLASES ENUM CREADAS
+        CatalogoAlquiler catalogo = new CatalogoAlquiler(10);
+        System.out.println("Número de alquileres: " + catalogo.getNumAlquiler());
+        //MOSTRAR EL CATALOGO
+        catalogo.mostrarCatal();
         
-
+        //COPIAR DE UN RANDOM :)
         CatalogoVehiculos cv = new CatalogoVehiculos(5);
         CatalogoClientes cc = new CatalogoClientes(5);
 
