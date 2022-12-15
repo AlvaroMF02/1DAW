@@ -94,8 +94,8 @@ public class Empresa {
     }
 
     //BUSCAR CLIENTE
-    public void buscarCliente(Cliente c) {
-        this.catalogoCli.buscarCliente(c.getNif());
+    public Cliente buscarCliente(Cliente c) {
+        return this.catalogoCli.buscarCliente(c.getNif());
     }
 
     //REGISTRAR VEHICULO
@@ -104,8 +104,8 @@ public class Empresa {
     }
 
     //BUSCAR VEHICULO
-    public void buscarVehiculo(Vehiculo v) {
-        this.catalogoVehi.buscarVehiculo(v.getBastidor());
+    public Vehiculo buscarVehiculo(Vehiculo v) {
+        return this.catalogoVehi.buscarVehiculo(v.getBastidor());
     }
 
     //REGISTRAR ALQUILER
@@ -114,15 +114,12 @@ public class Empresa {
     //pasamos el bastidor y el nif
     public void registrarAlquiler(Cliente cli, Vehiculo v, LocalDate fecha, int nDias) {
 
-        if (this.catalogoCli.buscarCliente(cli.getNif()) == null && this.catalogoVehi.buscarVehiculo(v.getBastidor()) == null) {
-            
-            if (v.isDisponible()) {
+        if (buscarCliente(cli) == null && buscarVehiculo(v) == null && v.isDisponible()) {
 
-                v.setDisponible(false);
-                Alquiler alquiler = new Alquiler(cli, v, fecha, nDias);
-                this.catalogoAlq.anadirAlquiler(alquiler);
+            v.setDisponible(false);
+            Alquiler alquiler = new Alquiler(cli, v, fecha, nDias);
+            this.catalogoAlq.anadirAlquiler(alquiler);
 
-            }
         }
 
     }
