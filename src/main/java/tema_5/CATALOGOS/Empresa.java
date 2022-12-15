@@ -134,7 +134,7 @@ public class Empresa {
 
     //REGISTRAR ALQUILER
     public void registrarAlquiler(Cliente cli, Vehiculo v, LocalDate fecha, int nDias) {
-
+        
         if (buscarCliente(cli) == null && buscarVehiculo(v) == null && v.isDisponible()) {
 
             v.setDisponible(false);
