@@ -24,20 +24,28 @@ public class PRUEBA_PARA_VICO {
                 case 1:
                     System.out.println("Ha escogido registrar a un cliente nuevo");
                     Cliente cli = CatalogoClientes.leerTecladoCliente();
-                    System.out.println(cli);
-                    //METER EL CLIENTE EN EL CATALOGO Y MOSTRARLO           CAMBIARLO, EL CATALOGO SE MUESTRA MAL
+                    
+                    //METER EL CLIENTE EN EL CATALOGO Y MOSTRARLO     ¿QUITAR NIF Y DEJARLO ALEATORIO?
                     rentacar.registrarCliente(cli);
                     rentacar.getCatalogoCli().mostrarCatal();
                     break;
                     
                 case 2:
                     System.out.println("Ha escogido registrar a un vehiculo nuevo");
-                    
+                    Vehiculo vehic = CatalogoVehiculos.leerTecladoVehiculo();
+
+                    //METER EL VEHICULO EN EL CATALOGO Y MOSTRARLO
+                    rentacar.registrarVehiculo(vehic);
+                    rentacar.getCatalogoVehi().mostrarCatalogo();
                     break;
                     
                 case 3:
                     System.out.println("Ha escogido registrar a un alquiler nuevo");
-                    
+                    Vehiculo vehic = CatalogoVehiculos.leerTecladoVehiculo();
+
+                    //METER EL VEHICULO EN EL CATALOGO Y MOSTRARLO
+                    rentacar.registrarVehiculo(vehic);
+                    rentacar.getCatalogoVehi().mostrarCatalogo();
                     break;
                     
                 case 4:

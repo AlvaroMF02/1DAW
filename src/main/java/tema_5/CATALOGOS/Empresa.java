@@ -19,7 +19,7 @@ public class Empresa {
     //CONSTRUCTOR
     public Empresa() {
 
-        this.cif = RandomStringUtils.randomAlphanumeric(9);
+        this.cif = RandomStringUtils.randomAlphanumeric(5);
         this.nombre = RandomStringUtils.randomAlphabetic(5);
         this.catalogoAlq = new CatalogoAlquiler(10);
         this.catalogoCli = new CatalogoClientes(10);
@@ -54,6 +54,15 @@ public class Empresa {
     public void setCatalogoCli(CatalogoClientes catalogoCli) {
         this.catalogoCli = catalogoCli;
     }
+
+    public CatalogoVehiculos getCatalogoVehi() {
+        return catalogoVehi;
+    }
+
+    public void setCatalogoVehi(CatalogoVehiculos catalogoVehi) {
+        this.catalogoVehi = catalogoVehi;
+    }
+    
 
     //TO STRING GRANDOTE
     public String toString() {

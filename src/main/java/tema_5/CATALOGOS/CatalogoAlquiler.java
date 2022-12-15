@@ -1,6 +1,8 @@
 package tema_5.CATALOGOS;
 
+import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  *
@@ -125,5 +127,31 @@ public class CatalogoAlquiler {
         }
 
         return tempo;
+    }
+    
+    //CREAR VEHICULO 
+    public static Alquiler leerTecladoAlquiler() {
+        Scanner teclado = new Scanner(System.in);
+        
+        Alquiler alq;
+        
+        //PEDIR CADA DATO
+        System.out.println("CLIENTE: ");
+        Cliente cli = CatalogoClientes.leerTecladoCliente();            //CAMBIARLO PARA ESCOGER UNO QUE YA ESTE CREADO
+
+        System.out.println("VEHICULO: ");
+        Vehiculo vehic = CatalogoVehiculos.leerTecladoVehiculo();       //CAMBIARLO PARA ESCOGER UNO QUE YA ESTE CREADO
+
+        System.out.println("FECHA: ");
+        LocalDate fecha = LocalDate.now();                              //HACERLO PARA QUE LO PUEDA METER EL CLIENTE
+        System.out.println(fecha);
+        
+        System.out.println("DIAS DE ALQUILER:");
+        int dias = teclado.nextInt();
+        
+        //INSTANCIACION DEL OBJETO
+        alq = new Alquiler(cli, vehic, fecha, dias);
+
+        return alq;
     }
 }

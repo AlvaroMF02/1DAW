@@ -44,6 +44,7 @@ public class CatalogoVehiculos {
         }
 
     }
+
     //BUSCAR UN VEHICULO DEL CATALOGO
     private int buscarVehiculo(Vehiculo v) {        //PRIVADO PQ SOLO LO UTILIZO EN EL METODO DE ABAJO
 
@@ -124,48 +125,45 @@ public class CatalogoVehiculos {
     //TO STRING
     public String toString() {
         String tmp = "";
-
         for (Vehiculo v : listaVehiculo) {
-
             if (v != null) {
                 tmp += v.toString() + "\n";
             }
-
         }
-
         return tmp;
     }
-    
+
     //CREAR VEHICULO 
-     public static Vehiculo leerTecladoVehiculo() {
+    public static Vehiculo leerTecladoVehiculo() {
         Scanner teclado = new Scanner(System.in);
+        
         String opc = "";
         boolean disponible = false;
         Vehiculo v;
+        
         //PEDIR CADA DATO
         System.out.println("MATRICULA: ");
         String matricula = teclado.nextLine();
-        
+
         System.out.println("COLOR: ");
         String color = teclado.nextLine();
-        
+
         System.out.println("MODELO: ");
         String modelo = teclado.nextLine();
-        
+
         System.out.println("DISPONIBLE: (si o no)");
-         do {             
-             opc = teclado.nextLine();
-             if (opc.equalsIgnoreCase("si")) {
-                 disponible = true;
-             }
-             if (!opc.equalsIgnoreCase("si") || !opc.equalsIgnoreCase("no")) {
-                 System.out.println("Escriba si o no");
-             }
-         } while (!opc.equalsIgnoreCase("si") || !opc.equalsIgnoreCase("no"));
-        
-        
+        do {
+            opc = teclado.nextLine();
+            if (opc.equalsIgnoreCase("si")) {
+                disponible = true;
+            }
+            if (!opc.equalsIgnoreCase("si") || !opc.equalsIgnoreCase("no")) {
+                System.out.println("Escriba si o no");
+            }
+        } while (!opc.equalsIgnoreCase("si") && !opc.equalsIgnoreCase("no"));
+
         System.out.println("TARIFA: ");
-        double tarifa = teclado.nextDouble();
+        double tarifa = teclado.nextDouble();                                       //HACER TRY CATCH
 
         //INSTANCIACION DEL OBJETO
         v = new Vehiculo(matricula, color, modelo, disponible, tarifa);
