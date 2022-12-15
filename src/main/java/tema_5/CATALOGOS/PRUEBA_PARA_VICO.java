@@ -23,8 +23,11 @@ public class PRUEBA_PARA_VICO {
             switch (eleccion) {
                 case 1:
                     System.out.println("Ha escogido registrar a un cliente nuevo");
-                    Cliente cli = CatalogoClientes.leerTecladoSerie();
-                    
+                    Cliente cli = CatalogoClientes.leerTecladoCliente();
+                    System.out.println(cli);
+                    //METER EL CLIENTE EN EL CATALOGO Y MOSTRARLO           CAMBIARLO, EL CATALOGO SE MUESTRA MAL
+                    rentacar.registrarCliente(cli);
+                    rentacar.getCatalogoCli().mostrarCatal();
                     break;
                     
                 case 2:
@@ -37,8 +40,9 @@ public class PRUEBA_PARA_VICO {
                     
                     break;
                     
-                default:
-                    System.out.println("Escoja una de las opciones del menú");
+                case 4:
+                    System.out.println("Agur");
+                    break;
             }
             
             

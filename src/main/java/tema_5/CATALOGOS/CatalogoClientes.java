@@ -135,7 +135,7 @@ public class CatalogoClientes {
     
     
     //PEDIR POR TECLADO UN CLIENTE
-    public static Cliente leerTecladoSerie() {
+    public static Cliente leerTecladoCliente() {
         Scanner teclado = new Scanner(System.in);
         
         Cliente cli;

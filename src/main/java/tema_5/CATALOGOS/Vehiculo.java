@@ -11,21 +11,32 @@ public class Vehiculo {
 
     private String bastidor;
     private String matricula;
-    private Color color;
-    private Modelo modelo;
+    private String color;
+    private String modelo;
     private boolean disponible;
     private double tarifa;
     private static int contador = 0;
 
+    //CONSTRUCTOR RANDOM
     public Vehiculo() {
         this.bastidor = String.valueOf(++contador);         //RandomStringUtils.randomAlphanumeric(10);
         this.matricula = RandomStringUtils.randomNumeric(4)
                 + RandomStringUtils.randomAlphabetic(3);
-        this.color = Color.getAleatorio();
-        this.modelo = Modelo.getAleatorio();
+        this.color = "negro";
+        this.modelo = "modelo";
         this.disponible = true;
     }
+    //CONSTRUCTOR NORMAL
 
+    public Vehiculo(String matricula, String color, String modelo, boolean disponible, double tarifa) {
+        this.bastidor = String.valueOf(++contador);
+        this.matricula = matricula;
+        this.color = color;
+        this.modelo = modelo;
+        this.disponible = disponible;
+        this.tarifa = tarifa;
+    }
+    
     public String getBastidor() {
         return bastidor;
     }
@@ -42,19 +53,19 @@ public class Vehiculo {
         this.matricula = matricula;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public Modelo getModelo() {
+    public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(Modelo modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
