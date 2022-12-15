@@ -108,10 +108,22 @@ public class Empresa {
         return this.catalogoVehi.buscarVehiculo(v.getBastidor());
     }
 
+    //BUSCAR ALQUILER
+    private int buscarAlquiler(Alquiler aux) {        //PRIVADO PQ SOLO LO UTILIZO EN EL METODO DE ABAJO
+
+        if (aux != null) {
+            for (int i = 0; i < this.catalogoAlq.getListaAlquiler().length; i++) {
+                //CAMBIOS PARA QUE NO COJA NULLS
+                if (aux.equals(this.catalogoAlq.getListaAlquiler()[i] != null && aux.equals(this.catalogoAlq.getListaAlquiler()[i]))) {
+                    return i;
+                }
+            }
+        }
+
+        return -1;
+    }
+
     //REGISTRAR ALQUILER
-    //busca al cliente, y al vehiculo para ver si estan y comprueba q el vehicul está disopneible
-    //si todo esta correcto se registra el alquiler (pasadno la fecha y los datos del cliete y ehiculo)
-    //pasamos el bastidor y el nif
     public void registrarAlquiler(Cliente cli, Vehiculo v, LocalDate fecha, int nDias) {
 
         if (buscarCliente(cli) == null && buscarVehiculo(v) == null && v.isDisponible()) {
@@ -124,11 +136,13 @@ public class Empresa {
 
     }
 
-    //al registrarlo el vehiculo tiene q pasar a no disponible
     //RECIBIR VEHICULO ALQUILADO (Alquiler c)
-    //para pasarlo a disponible
     public void recibirAlquiler(Alquiler a) {
-        a.getVehiculo().setDisponible(true);
+
+        if (buscarAlquiler(a) >= 0) {
+            a.getVehiculo().setDisponible(true);
+        }
+
     }
 
     //EQUALS Y HASHCODE

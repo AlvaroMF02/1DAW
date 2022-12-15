@@ -14,7 +14,7 @@ public class Cliente {
     private String nif;
     private static int contador = 0;
 
-    //CONSTRUCTORES
+    //CONSTRUCTOR ALEATORIO
     public Cliente() {
         this.nombre = NombresClie.getAleatorio();
         this.apellido = ApellidosCli.getAleatorio();
@@ -24,6 +24,14 @@ public class Cliente {
         //contador++;
         //this.nif = String.valueOf(contador);
     }
+    
+    //CONSTRUCTOR NORMAL
+    public Cliente(NombresClie nombre, ApellidosCli apellido, String nif) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.nif = nif;
+    }
+    
 
     //GETTER SETTER
     public NombresClie getNombre() {

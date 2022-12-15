@@ -26,8 +26,6 @@ public class MainEmpresa {
         emp.buscarCliente(cli);
         emp.buscarVehiculo(veh);
         
-        //PONER A TRUE EL VEHICULO
-        veh.setDisponible(true);
         
         //COMPROBAR EL REGISTRO DE UN ALQUILER
         emp.registrarAlquiler(cli, veh, LocalDate.now(), 3);
