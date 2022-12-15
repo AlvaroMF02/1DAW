@@ -1,5 +1,7 @@
 package tema_5.CATALOGOS;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Álvaro
@@ -16,13 +18,24 @@ public class MainEmpresa {
         
         //AÑADIR A SUS CATALOGOS CORRESPONDIENTES
         emp.registrarCliente(cli);
-        emp.regiustrarVehiculo(veh);
+        emp.registrarVehiculo(veh);
         //MOSTRAR
         System.out.println(emp.toString());
 
         //BUSCAR
         emp.buscarCliente(cli);
         emp.buscarVehiculo(veh);
+        
+        //PONER A TRUE EL VEHICULO
+        veh.setDisponible(true);
+        
+        //COMPROBAR EL REGISTRO DE UN ALQUILER
+        emp.registrarAlquiler(cli, veh, LocalDate.now(), 3);
+        System.out.println(emp.toString());
+        
+        //RECIBIR EL VEHICULO
+        emp.recibirAlquiler(emp.getCatalogoAlq().buscarAlquiler(1));
+        System.out.println(emp.toString());
         
     }
 }

@@ -1,5 +1,6 @@
 package tema_5.CATALOGOS;
 
+import java.time.LocalDate;
 import java.util.Objects;
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -98,13 +99,39 @@ public class Empresa {
     }
 
     //REGISTRAR VEHICULO
-    public void regiustrarVehiculo(Vehiculo v) {
+    public void registrarVehiculo(Vehiculo v) {
         this.catalogoVehi.anadirVehiculo(v);
     }
 
     //BUSCAR VEHICULO
     public void buscarVehiculo(Vehiculo v) {
         this.catalogoVehi.buscarVehiculo(v.getBastidor());
+    }
+
+    //REGISTRAR ALQUILER
+    //busca al cliente, y al vehiculo para ver si estan y comprueba q el vehicul está disopneible
+    //si todo esta correcto se registra el alquiler (pasadno la fecha y los datos del cliete y ehiculo)
+    //pasamos el bastidor y el nif
+    public void registrarAlquiler(Cliente cli, Vehiculo v, LocalDate fecha, int nDias) {
+
+        if (this.catalogoCli.buscarCliente(cli.getNif()) == null && this.catalogoVehi.buscarVehiculo(v.getBastidor()) == null) {
+            
+            if (v.isDisponible()) {
+
+                v.setDisponible(false);
+                Alquiler alquiler = new Alquiler(cli, v, fecha, nDias);
+                this.catalogoAlq.anadirAlquiler(alquiler);
+
+            }
+        }
+
+    }
+
+    //al registrarlo el vehiculo tiene q pasar a no disponible
+    //RECIBIR VEHICULO ALQUILADO (Alquiler c)
+    //para pasarlo a disponible
+    public void recibirAlquiler(Alquiler a) {
+        a.getVehiculo().setDisponible(true);
     }
 
     //EQUALS Y HASHCODE
