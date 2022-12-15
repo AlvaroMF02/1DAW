@@ -23,7 +23,8 @@ public class PRUEBA_PARA_VICO {
             switch (eleccion) {
                 case 1:
                     System.out.println("Ha escogido registrar a un cliente nuevo");
-                    Cliente 
+                    Cliente cli = CatalogoClientes.leerTecladoSerie();
+                    
                     break;
                     
                 case 2:
