@@ -9,15 +9,15 @@ import org.apache.commons.lang3.RandomStringUtils;
  */
 public class Cliente {
 
-    private NombresClie nombre;
-    private ApellidosCli apellido;
+    private String nombre;
+    private String apellido;
     private String nif;
     private static int contador = 0;
 
     //CONSTRUCTOR ALEATORIO
     public Cliente() {
-        this.nombre = NombresClie.getAleatorio();
-        this.apellido = ApellidosCli.getAleatorio();
+        this.nombre = "Alea";
+        this.apellido = "Alea";
         this.nif = String.valueOf(++contador);//RandomStringUtils.randomAlphanumeric(9);
         
         //PARA FACILITAR LA PRUEBA EN EL MAIN
@@ -26,7 +26,7 @@ public class Cliente {
     }
     
     //CONSTRUCTOR NORMAL
-    public Cliente(NombresClie nombre, ApellidosCli apellido, String nif) {
+    public Cliente(String nombre, String apellido, String nif) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.nif = nif;
@@ -34,19 +34,19 @@ public class Cliente {
     
 
     //GETTER SETTER
-    public NombresClie getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(NombresClie nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public ApellidosCli getApellido() {
+    public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(ApellidosCli apellido) {
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 

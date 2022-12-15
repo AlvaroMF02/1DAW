@@ -1,6 +1,7 @@
 package tema_5.CATALOGOS;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  *
@@ -130,5 +131,27 @@ public class CatalogoClientes {
         }
 
         return tempo;
+    }
+    
+    
+    //PEDIR POR TECLADO UN CLIENTE
+    public static Cliente leerTecladoSerie() {
+        Scanner teclado = new Scanner(System.in);
+        
+        Cliente cli;
+        //PEDIR CADA DATO
+        System.out.println("NOMBRE: ");
+        String nombre = teclado.nextLine();
+
+        System.out.println("APELLIDO: ");
+        String apellido = teclado.nextLine();
+
+        System.out.println("NIF: ");
+        String nif = teclado.nextLine();
+
+        //INSTANCIACION DEL OBJETO
+        cli = new Cliente(nombre, apellido, nif);
+
+        return cli;
     }
 }
