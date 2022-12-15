@@ -13,17 +13,31 @@ public class Ejer13 {
     public static void main(String[] args) {
 
         int numero;
-        int [] almacen;
-        
+        int[] almacen = new int[0];
+        int tamanio = 0;
+        int contadorNumer = 0;
+        int cantidad = 0;
+
         do {
             
             numero = leerNumero();
-            almacen = rellenarArray(numero);
-            
+            tamanio++;
+
+            //COPIA PARA AGRANDAR EL ARRAY
+            almacen = Arrays.copyOf(almacen, tamanio);
+            //GUARDAR EL NUMERO
+            almacen[tamanio - 1] = numero;
+
         } while (numero != 0);
 
-        for (int i : almacen) {
-            System.out.println(i);
+        //ORDENAR ARRAY
+        Arrays.sort(almacen);
+        for (int i = 0; i < almacen.length; i++) {
+            
+            if (almacen[i] == almacen[i+1]) {
+                
+            }
+            
         }
     }
 
@@ -52,16 +66,5 @@ public class Ejer13 {
         } while (repetir);
 
         return numero;
-    }
-    
-    public static int []rellenarArray(int numero){
-        int [] aux = new int[2];
-        //0
-        //GENERAR UNA COPIA + 1 DE TAMAÑO PARA IR AÑADIENDO MAS NUMEROS
-        aux = Arrays.copyOf(aux, aux.length + 1);
-        //1
-        aux [aux.length+1] = numero;
-        System.out.println(aux.length);
-        return aux;
     }
 }
