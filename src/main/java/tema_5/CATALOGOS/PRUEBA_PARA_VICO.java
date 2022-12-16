@@ -15,17 +15,15 @@ public class PRUEBA_PARA_VICO {
         Scanner teclado = new Scanner(System.in);
         Empresa rentacar = new Empresa();
 
-        //HACER QUE LA EMPRESA INDIQUE LA TARIFA QUE QUIERE
-        //PONER EN EL MENU PARA VER EL LISTADO
         int eleccionMenu = 0;
         int eleccionAlq = 0;
 
         //LA EMPRESA INDICA LA TARIFA QUE SE COBRARÁ
         System.out.println("Indique la tarifa que se va a cobrar");
-        int tarifa = teclado.nextInt();                                                     //CONTROLAR EXCEPCIONES
+        double tarifa = teclado.nextDouble();                                               //CONTROLAR EXCEPCIONES
         //ASIGNAR TARIFA
         rentacar.getCatalogoVehi().cambiarTarifa(tarifa);
-        
+
         do {
             mostrarMenu();
             System.out.println("¿Qué desea hacer?");
@@ -43,6 +41,7 @@ public class PRUEBA_PARA_VICO {
                     break;
 
                 case 3:
+                    //TENGO QUE DIVIDIR LOS DATOS DE CLIENTE Y DE VEHICULO PARA ALMACENARLOS Y CREAR UN ALQUILER
                     do {
                         mostrarMenuAlquiler();
                         eleccionAlq = teclado.nextInt();
@@ -54,8 +53,10 @@ public class PRUEBA_PARA_VICO {
                                 break;
 
                             case 2:
-                                System.out.println("Escoger cliente nuevo");
-
+                                System.out.println("Escoger cliente:");
+                                //ASIGNAR UNO CON EL NIF / MOSTRAR EL CATALOGO PARA QUE ESCOJA
+                                rentacar.getCatalogoCli().mostrarCatal();
+                                System.out.println("Indique el nif del cliente con el que desea alquilar");
                                 break;
 
                             case 3:
@@ -65,31 +66,21 @@ public class PRUEBA_PARA_VICO {
                                 break;
 
                             case 4:
-                                System.out.println("Escoger cliente nuevo");
-
+                                System.out.println("Escoger vehiculo:");
+                                //ASIGNAR UNO CON EL NIF / MOSTRAR EL CATALOGO PARA QUE ESCOJA
+                                rentacar.getCatalogoVehi().mostrarCatalogo();
+                                System.out.println("Indique el bastidor del vehiculo con el que desea alquilar");
                                 break;
 
                             case 5:
+                                teclado.nextLine();
                                 System.out.println("Alquiler cancelado");
-
                                 break;
                         }
                     } while (eleccionAlq != 5);
 
-                    //ASIGNAR UNO CON EL NIF / MOSTRAR EL CATALOGO PARA QUE ESCOJA
-                    System.out.println("Indique el nif del cliente con el que se alquilará el vehiculo");
-                    //CREAR UNO NUEVO
-                    System.out.println("DATOS CLIENTE:");
-                    Cliente nuevoCli = CatalogoClientes.leerTecladoCliente();
-
-                    //ASIGNAR VEHICULO CON EL BASTIDOR / MOSTRAR EL CATALOGO PARA QUE ESCOJA
-                    System.out.println("Indique el bastidor del vehiculo que se alquilará");
-                    //CREAR VEHICULO NUEVO
-                    System.out.println("DATOS VEHICULO:");
-                    Vehiculo nuevoVehic = CatalogoVehiculos.leerTecladoVehiculo();
-
-                    rentacar.registrarAlquiler(nuevoCli, nuevoVehic, LocalDate.now(), eleccionMenu);    //CAMBIAR LA FECHANOW Y HACERLO DE OTRA FORMA, PREGUNTAR SI NO ESTA MAL HACERLO ASI
-                    rentacar.getCatalogoAlq().mostrarCatal();
+//                    rentacar.registrarAlquiler(nuevoCli, nuevoVehic, LocalDate.now(), eleccionMenu);    //CAMBIAR LA FECHANOW Y HACERLO DE OTRA FORMA, PREGUNTAR SI NO ESTA MAL HACERLO ASI
+//                    rentacar.getCatalogoAlq().mostrarCatal();
                     break;
 
                 case 4:
