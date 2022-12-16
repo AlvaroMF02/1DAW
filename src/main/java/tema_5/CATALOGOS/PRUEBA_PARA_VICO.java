@@ -9,14 +9,15 @@ import java.util.Scanner;
  */
 public class PRUEBA_PARA_VICO {
 
-    //MODULARIZAR TODO :)
+    //CREAR EL PROYECTO NUEVO QUE LE VOY A PASAR Y SEGUIR TRABAJANDO AHI
+    //EMPEZAR A MODULARIZAR EL SWITCH DE ALQUILER
+    
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
         Empresa rentacar = new Empresa();
 
         //SE PUEDEN PONER LOS COLORES DE LOS VEHICULOS CON ENUM Y CON UN IF
-        
         int eleccionMenu = 0;
         int eleccionAlq = 0;
 
@@ -59,6 +60,8 @@ public class PRUEBA_PARA_VICO {
                                 //ASIGNAR UNO CON EL NIF / MOSTRAR EL CATALOGO PARA QUE ESCOJA
                                 rentacar.getCatalogoCli().mostrarCatal();
                                 System.out.println("Indique el nif del cliente con el que desea alquilar");
+                                String escogerNif = teclado.nextLine();
+                                //rentacar.registrarAlquiler(rentacar.getCatalogoCli().buscarCliente(escogerNif), v, LocalDate.EPOCH, eleccionAlq);
                                 break;
 
                             case 3:
@@ -72,6 +75,8 @@ public class PRUEBA_PARA_VICO {
                                 //ASIGNAR UNO CON EL NIF / MOSTRAR EL CATALOGO PARA QUE ESCOJA
                                 rentacar.getCatalogoVehi().mostrarCatalogo();
                                 System.out.println("Indique el bastidor del vehiculo con el que desea alquilar");
+                                String escogerBastidor = teclado.nextLine();
+                                //rentacar.registrarAlquiler(cli, rentacar.getCatalogoVehi().buscarVehiculo(escogerBastidor), LocalDate.EPOCH, eleccionAlq);
                                 break;
 
                             case 5:
@@ -80,9 +85,6 @@ public class PRUEBA_PARA_VICO {
                                 break;
                         }
                     } while (eleccionAlq != 5);
-
-//                    rentacar.registrarAlquiler(nuevoCli, nuevoVehic, LocalDate.now(), eleccionMenu);    //CAMBIAR LA FECHANOW Y HACERLO DE OTRA FORMA, PREGUNTAR SI NO ESTA MAL HACERLO ASI
-//                    rentacar.getCatalogoAlq().mostrarCatal();
                     break;
 
                 case 4:
