@@ -21,7 +21,7 @@ public class Empresa {
 
         this.cif = RandomStringUtils.randomAlphanumeric(5);
         this.nombre = RandomStringUtils.randomAlphabetic(5);
-        this.catalogoAlq = new CatalogoAlquiler(10);
+        this.catalogoAlq = new CatalogoAlquiler(0);
         this.catalogoCli = new CatalogoClientes(10);
         this.catalogoVehi = new CatalogoVehiculos(10);
     }

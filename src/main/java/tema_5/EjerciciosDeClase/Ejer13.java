@@ -16,7 +16,7 @@ public class Ejer13 {
         int[] almacen = new int[0];
         int tamanio = 0;
         int contadorNumer = 0;
-        int cantidad = 0;
+        
 
         do {
             
@@ -33,10 +33,13 @@ public class Ejer13 {
         //ORDENAR ARRAY
         Arrays.sort(almacen);
         for (int i = 0; i < almacen.length; i++) {
-            
-            if (almacen[i] == almacen[i+1]) {
-                
+            //ENCONTRAR UN NUMERO Y PONERLO A NULL Y CONTARLO CON EL CONTADOR
+            int cantidad = 0;
+            if (almacen[i] == Arrays.binarySearch(almacen, i)) {
+                almacen = null;
+                cantidad++;
             }
+            System.out.println(almacen[i] + ": " + cantidad);
             
         }
     }
@@ -67,4 +70,9 @@ public class Ejer13 {
 
         return numero;
     }
+
+
+
+    //crea un array de 20 de primeras
+    //ir contando los valores y asignarle la posicion del array a la cantid
 }

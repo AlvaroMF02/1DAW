@@ -37,6 +37,13 @@ public class CatalogoVehiculos {
         return listaVehiculo;
     }
 
+    //CAMBIAR TARIFA DE VEHICULO
+    public void cambiarTarifa(double tarifa){
+        for (int i = 0; i < this.listaVehiculo.length; i++) {
+            this.listaVehiculo[i].setTarifa(tarifa);
+        }
+    }
+    
     //MOSTRAR LOS VEHICULOS
     public void mostrarCatalogo() {
         for (Vehiculo v : listaVehiculo) {
