@@ -15,6 +15,8 @@ public class PRUEBA_PARA_VICO {
         Scanner teclado = new Scanner(System.in);
         Empresa rentacar = new Empresa();
 
+        //SE PUEDEN PONER LOS COLORES DE LOS VEHICULOS CON ENUM Y CON UN IF
+        
         int eleccionMenu = 0;
         int eleccionAlq = 0;
 

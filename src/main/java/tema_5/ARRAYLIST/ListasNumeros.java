@@ -23,7 +23,7 @@ public class ListasNumeros {
         System.out.println("Tamaño: " + listasEnteros.size() + "\n");
         
         //MOSTRAR   SE HACE CON UN GET      TAMBIEN SE PUEDE HACER CON FOR EACH
-        //listasEnteros.forEach(System.out::println);
+        //listasEnteros.forEach(System.out::println);                           //ESTO ES EL LAMBDA
         for (int i = 0; i < listasEnteros.size(); i++) {
             System.out.println("Elemento " + (i+1) + ": " + listasEnteros.get(i));
             //System.out.println("Poscicion " + i + ": " + listasEnteros.get(i));
