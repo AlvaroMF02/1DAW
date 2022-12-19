@@ -17,27 +17,27 @@ public class Ejer23 {
         int numRandom;
 
         //CREAR DOS LISTAS DE INTEGER
-        ArrayList<Integer> lista1;
-        ArrayList<Integer> lista2;
+        ArrayList<Integer> lista1 = new ArrayList<>();
+        ArrayList<Integer> lista2 = new ArrayList<>();
 
         //CANTIDAD DE ELEMENTOS ENTRE 5 Y 15 EN LISTA 1
         cantidadLista1 = alea.nextInt(5, 15 + 1);
-        lista1 = new ArrayList<>(cantidadLista1);
 
+        
         //CANTIDAD DE ELEMENTOS ENTRE 10 Y 20 EN LISTA 2
         cantidadLista2 = alea.nextInt(10, 20 + 1);
-        lista2 = new ArrayList<>(cantidadLista2);
 
+        
         //AGREGAR NUMEROS ENTRE 50 Y 100
         //LISTA 1
-        for (int i = 0; i < lista1.size(); i++) {
+        for (int i = 0; i < cantidadLista1; i++) {
             numRandom = alea.nextInt(50, 100 + 1);
             //RELLENAR LISTA
             lista1.add(numRandom);
         }
 
         //LISTA 2
-        for (int i = 0; i < lista2.size(); i++) {
+        for (int i = 0; i < cantidadLista2; i++) {
             numRandom = alea.nextInt(50, 100 + 1);
             //RELLENAR LISTA
             lista2.add(numRandom);
@@ -46,19 +46,19 @@ public class Ejer23 {
         //MOSTRAR LISTAS
         System.out.println("Lista 1:");
         mostrarLista(lista1);
-        System.out.println("Lista 2:");
+        System.out.println("\nLista 2:");
         mostrarLista(lista2);
 
-        //CREAR LISTA 3 CON ELEMENTOS DE LA LISTA 1 Y QUE NO ESTEN EN LA LISTA 2
+        //CREAR LISTA 3 CON ELEMENTOS DE LA LISTA 1 Y QUE NO ESTEN EN LA LISTA 2    SIGUE SALIENDO ERROR
         ArrayList<Integer> lista3 = new ArrayList<>();
 
         for (int i = 0; i < lista1.size(); i++) {
 
-            if (!lista2.contains(lista1.get(i))) {
+            if (!lista1.contains(lista2.get(i))) {
                 lista3.add(lista1.get(i));
             }
         }
-        System.out.println("Lista 3:");
+        System.out.println("\nLista 3:");
         mostrarLista(lista3);
         
         
@@ -75,15 +75,18 @@ public class Ejer23 {
         for (int i = 0; i < lista2.size(); i++) {
 
             if (lista2.get(i) % 2 != 0) {
-                lista4.add(lista1.get(i));
+                lista4.add(lista2.get(i));
             }
         }
-        System.out.println("Lista 4:");
+        System.out.println("\nLista 4:");
         mostrarLista(lista4);
     }
 
     //IMPRIMIR LISTAS
     public static void mostrarLista(ArrayList lista) {
-        lista.forEach(System.out::println);
+        for (Object lis : lista) {
+            System.out.print(lis +" - ");
+        }
+                
     }
 }
