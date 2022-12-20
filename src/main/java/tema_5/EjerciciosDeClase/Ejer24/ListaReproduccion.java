@@ -2,6 +2,7 @@ package tema_5.EjerciciosDeClase.Ejer24;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -48,56 +49,54 @@ public class ListaReproduccion {
     public void cambiarCancion(int posicion, Cancion nueva) {
         this.lista.set(posicion, nueva);
     }
-    
+
     //AÑADE LA CANCION QUE LE PASE                                              //COMPROBARLO
     public void grabarCancion(Cancion nueva) {
         this.lista.add(nueva);
     }
-    
-    
+
     //ELIMINA LA CANCION QUE INDIQUES                                           //COMPROBARLO INDEX OUT OF BOUND
-    public void eliminaCancion(int id){
+    public void eliminaCancion(int id) {
         this.lista.remove(id);
     }
-    
+
     //ELIMINA LA CANCION QUE INDIQUES PERO CON OBJETO                           //COMPROBARLO INDEX OUT OF BOUND
-    public void eliminaCancion(Cancion c){
+    public void eliminaCancion(Cancion c) {
         this.lista.remove(c);
     }
-    
+
     //MUESTRA LOS NOMBRES DE LAS CANCIONES                                      //COMPROBARLO
-    public String imprimirLista (ListaReproduccion tmp){
-        
+    public String imprimirLista(ListaReproduccion tmp) {
+
         String nombres = "";
-        
+
         for (Cancion cancion : lista) {
             nombres += cancion.getNombre() + "\n";
         }
-        
+
         return nombres;
     }
-    
+
     //PASA LA POSICION DE LA CANCION QUE BUSQUES
-    public int buscarCancion(Cancion c){                                        //COMPROBAR
-        
+    public int buscarCancion(Cancion c) {                                        //COMPROBAR
+
         int posicion = 0;
-        
+
         posicion = this.lista.indexOf(c);
-        
+
         return posicion;
     }
-    
-    //ORDENA LA LISTA POR EL NOMBRE                                             //TERMINARLO
-    public void ordenarListaNombre(){
-        Collections.sort(this.lista, c);
+
+    //ORDENA LA LISTA POR EL NOMBRE                                             //COMPROBAR
+    public void ordenarListaNombre() {
+        Collections.sort(lista, new SortNombre());
     }
-    
-    //ORDENA LA LISTA POR EL AUTOR                                              //TERMINARLO
-    public void ordenarListaAutor(){
-        Collections.sort(lista, c);
+
+    //ORDENA LA LISTA POR EL AUTOR                                              //COMPROBAR
+    public void ordenarListaAutor() {
+        Collections.sort(lista, new SortAutor());
     }
-    
-    
+
     //BUSCAR CANCIONES POR LISTA
     //BUSCAR CANCIONES POR OBJETO
     //BUSCAR CANCIONES POR CRITERIOCOMPARATOR

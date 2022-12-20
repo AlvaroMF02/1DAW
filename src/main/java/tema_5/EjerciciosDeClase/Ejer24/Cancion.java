@@ -1,5 +1,7 @@
 package tema_5.EjerciciosDeClase.Ejer24;
 
+import java.util.Objects;
+
 /**
  *
  * @author alvaro
@@ -64,10 +66,14 @@ public class Cancion {
     }
 
     //BUSQUEDA POR ID CANCION
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 11 * hash + this.idCancion;
+        int hash = 3;
+        hash = 71 * hash + Objects.hashCode(this.nombre);
+        hash = 71 * hash + Objects.hashCode(this.autor);
+        hash = 71 * hash + Objects.hashCode(this.album);
+        hash = 71 * hash + this.idCancion;
         return hash;
     }
 
@@ -83,8 +89,18 @@ public class Cancion {
             return false;
         }
         final Cancion other = (Cancion) obj;
-        return this.idCancion == other.idCancion;
+        if (this.idCancion != other.idCancion) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.autor, other.autor)) {
+            return false;
+        }
+        return Objects.equals(this.album, other.album);
     }
+    
     
     
 }
