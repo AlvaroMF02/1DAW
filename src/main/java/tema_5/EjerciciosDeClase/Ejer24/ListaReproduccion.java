@@ -16,6 +16,12 @@ public class ListaReproduccion {
     //CONSTRUCTOR
     public ListaReproduccion() {
         this.lista = new ArrayList<>();
+        
+        //RELLENAR EL CON VALORES NULOS
+        for (int i = 0; i < this.lista.size(); i++) {
+            this.lista.add(new Cancion());
+        }
+        
     }
 
     //DEVUELVE EL NUMERO DE CANCIONES

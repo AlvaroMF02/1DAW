@@ -13,6 +13,7 @@ public class Cancion {
     private String autor;
     private String album;
     private int idCancion;
+    private static int contador = 0;
 
     //CONSTRUCTOR
     public Cancion(String nombre, String autor, String album, int idCancion) {
@@ -21,8 +22,14 @@ public class Cancion {
         this.album = album;
         this.idCancion = idCancion;
     }
+    
 
     public Cancion() {
+        this.nombre = "miau";
+        this.autor = "meow";
+        this.album = "miaus";
+        contador++;
+        this.idCancion = contador;
     }
 
     //GETTER SETTER
