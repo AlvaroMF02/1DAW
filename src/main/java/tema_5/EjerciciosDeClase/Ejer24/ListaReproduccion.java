@@ -95,12 +95,12 @@ public class ListaReproduccion {
 
     //ORDENA LA LISTA POR EL NOMBRE                                             //COMPROBAR
     public void ordenarListaNombre() {
-        Collections.sort(lista, new SortNombre());
+        Collections.sort(lista, (c1,c2)->c1.getNombre().compareToIgnoreCase(c2.getNombre()));
     }
 
     //ORDENA LA LISTA POR EL AUTOR                                              //COMPROBAR
     public void ordenarListaAutor() {
-        Collections.sort(lista, new SortAutor());
+        Collections.sort(lista, (c1,c2)->c1.getAutor().compareToIgnoreCase(c2.getAutor()));
     }
 
     //BUSCAR CANCIONES POR LISTA
